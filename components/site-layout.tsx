@@ -22,13 +22,13 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   if (isCommunityPage) {
     return (
-      <div className="min-h-screen bg-white text-slate-900">
+      <div className="min-h-screen bg-[#f7f5ef] text-slate-900">
         <header className="border-b border-slate-200 bg-white">
           <div className="mx-auto flex w-full max-w-4xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
             <Link href="/community" className="inline-flex items-center" aria-label="5501 Forward Community Vision Page">
               <Image src="/images/5501forward.logo.png" alt="5501 Forward" width={180} height={61} className="h-auto w-[140px] sm:w-[170px]" priority />
             </Link>
-            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-600">Community Vision Page</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-600">COMMUNITY VISION PAGE</span>
           </div>
         </header>
         <main className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-10">{children}</main>
@@ -37,8 +37,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <p className="font-medium text-slate-800">5501 Forward</p>
             <p>Listening First. Planning Responsibly.</p>
             <p>Preliminary community vision page</p>
-            <p><Link href="/" className="text-xs underline underline-offset-4">Return to main site</Link></p>
-          </div>
+                      </div>
         </footer>
       </div>
     )
