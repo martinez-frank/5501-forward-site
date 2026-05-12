@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
@@ -16,21 +17,29 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-          <Link href="/" className="text-lg font-semibold tracking-tight sm:text-xl">
-            5501 Forward
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+          <Link href="/" className="inline-flex items-center" aria-label="5501 Forward Home">
+            <Image
+              src="/images/5501forward.logo.png"
+              alt="5501 Forward — Listening First. Planning Responsibly."
+              width={220}
+              height={74}
+              className="hidden h-auto w-[170px] sm:block"
+              priority
+            />
+            <span className="text-base font-semibold tracking-tight sm:hidden">5501 Forward</span>
           </Link>
 
           <nav className="hidden flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-600 lg:flex">
             {navItems.map(([label, href]) => (
-              <Link key={href} href={href} className="transition hover:text-slate-900">
+              <Link key={href} href={href} className="transition-colors duration-200 hover:text-[#8E6F3E]">
                 {label}
               </Link>
             ))}
           </nav>
 
           <details className="group relative lg:hidden">
-            <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
+            <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-50">
               Menu
             </summary>
             <nav className="absolute right-0 mt-2 w-64 rounded-xl border border-slate-200 bg-white p-3 shadow-lg">
@@ -39,7 +48,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   <li key={href}>
                     <Link
                       href={href}
-                      className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-slate-900"
+                      className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition duration-200 hover:bg-slate-100 hover:text-slate-900"
                     >
                       {label}
                     </Link>
