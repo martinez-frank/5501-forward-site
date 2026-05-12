@@ -70,6 +70,16 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="space-y-16 pb-6">
+      <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+        <Image
+          src="/images/5501forward.logo.png"
+          alt="5501 Forward — Listening First. Planning Responsibly."
+          width={1200}
+          height={400}
+          className="h-auto w-full max-w-xl"
+          priority
+        />
+      </section>
       <section className="grid gap-8 lg:grid-cols-2 lg:items-center">
         <div className="space-y-5">
           <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-600">Denver Redevelopment Initiative</p>
@@ -84,13 +94,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
             <Link href="/project" className="rounded-lg bg-slate-900 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-700">
-              View Project Overview
+              View Project Overview →
             </Link>
             <Link href="/execution-roadmap" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50">
-              Explore the Roadmap
+              Explore the Roadmap →
             </Link>
             <Link href="/contact" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50">
-              Contact Project Team
+              Contact Project Team →
             </Link>
           </div>
         </div>
@@ -208,13 +218,13 @@ export default function HomePage() {
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-slate-900 p-8 text-white sm:p-10">
-        <h2 className="text-3xl font-semibold tracking-tight">Let’s move the project forward responsibly.</h2>
+        <h2 className="text-3xl font-semibold tracking-tight">Listening first. Planning responsibly.</h2>
         <p className="mt-4 max-w-3xl text-base leading-7 text-slate-100">
           For project inquiries, community feedback, public partner coordination, consultant input, or capital partner
           discussions, contact the project team.
         </p>
         <Link href="/contact" className="mt-6 inline-flex rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200">
-          Contact Project Team
+          Contact Project Team →
         </Link>
       </section>
     </div>
