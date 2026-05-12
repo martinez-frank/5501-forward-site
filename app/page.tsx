@@ -73,24 +73,14 @@ export default function HomePage() {
       <section className="grid gap-10 lg:grid-cols-2 lg:items-center">
         <div className="space-y-5">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6F5531]">DENVER REDEVELOPMENT INITIATIVE</p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">5501 E. 33rd Avenue</h1>
-          <div className="pt-1">
-            <Image
-              src="/images/5501forward.logo.png"
-              alt="5501 Forward — Listening First. Planning Responsibly."
-              width={420}
-              height={142}
-              className="h-auto w-full max-w-[300px]"
-              priority
-            />
-          </div>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">5501 Forward</h1>
+          <p className="text-xl font-medium text-slate-800 sm:text-2xl">Listening First. Planning Responsibly.</p>
           <p className="text-lg text-slate-700">
-            A Denver redevelopment initiative connecting community priorities, public-sector tools, and responsible capital.
+            A civic redevelopment platform connecting community priorities, public-sector tools, and responsible capital.
           </p>
           <p className="text-base leading-7 text-slate-700">
-            5501 Forward is an early-stage redevelopment platform focused on organizing the site, consultant input,
-            environmental diligence, entitlement strategy, and capital readiness for a potential mixed-use future at 5501 E.
-            33rd Avenue in Denver.
+            Early-stage planning is underway for a potential mixed-use future in Denver, with focus on environmental
+            diligence, entitlement strategy, consultant input, and capital readiness.
           </p>
           <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
             <Link href="/project" className="rounded-lg bg-slate-900 px-5 py-3 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
