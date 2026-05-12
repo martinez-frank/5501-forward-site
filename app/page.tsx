@@ -92,6 +92,9 @@ export default function HomePage() {
             <Link href="/contact" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition-colors duration-200 hover:border-[#B99963] hover:bg-[#F9F6EF]">
               Contact Project Team →
             </Link>
+            <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-[#B99963] bg-[#F9F6EF] px-5 py-3 text-center text-sm font-semibold text-slate-900 transition-colors duration-200 hover:bg-[#F2E9D8]">
+              Community Vision Page ↗
+            </Link>
           </div>
         </div>
 
