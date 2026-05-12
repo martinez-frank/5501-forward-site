@@ -70,13 +70,19 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="space-y-20 pb-6">
-      <section className="animate-in-view grid gap-10 lg:grid-cols-2 lg:items-center">
+      <section className="grid gap-10 lg:grid-cols-2 lg:items-center">
         <div className="space-y-5">
-          <p className="inline-flex rounded-full border border-[#D2BC93] bg-[#F8F3E9] px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#6F5531]">DENVER REDEVELOPMENT INITIATIVE</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6F5531]">DENVER REDEVELOPMENT INITIATIVE</p>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">5501 E. 33rd Avenue</h1>
-          <div className="space-y-1 border-l-2 border-[#C6A56F] pl-4">
-            <p className="text-lg font-semibold text-slate-900">5501 Forward</p>
-            <p className="text-base font-medium text-[#7A6140]">Listening First. Planning Responsibly.</p>
+          <div className="pt-1">
+            <Image
+              src="/images/5501forward.logo.png"
+              alt="5501 Forward — Listening First. Planning Responsibly."
+              width={420}
+              height={142}
+              className="h-auto w-full max-w-[300px]"
+              priority
+            />
           </div>
           <p className="text-lg text-slate-700">
             A Denver redevelopment initiative connecting community priorities, public-sector tools, and responsible capital.
@@ -87,26 +93,26 @@ export default function HomePage() {
             33rd Avenue in Denver.
           </p>
           <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
-            <Link href="/project" className="rounded-lg bg-slate-900 px-5 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-700">
+            <Link href="/project" className="rounded-lg bg-slate-900 px-5 py-3 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
               View Project Overview →
             </Link>
-            <Link href="/execution-roadmap" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#B99963] hover:bg-[#F9F6EF]">
+            <Link href="/execution-roadmap" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition-colors duration-200 hover:border-[#B99963] hover:bg-[#F9F6EF]">
               Explore the Roadmap →
             </Link>
-            <Link href="/contact" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#B99963] hover:bg-[#F9F6EF]">
+            <Link href="/contact" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition-colors duration-200 hover:border-[#B99963] hover:bg-[#F9F6EF]">
               Contact Project Team →
             </Link>
           </div>
         </div>
 
         <figure className="space-y-3">
-          <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm transition duration-500 hover:shadow-md motion-reduce:transition-none">
+          <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
             <Image
               src="/images/5501-33rd-6story-context-rendering.jpg"
               alt="Conceptual redevelopment rendering for 5501 Forward"
               width={1600}
               height={1067}
-              className="h-full w-full object-cover transition duration-700 hover:scale-[1.02] motion-reduce:transform-none"
+              className="h-full w-full object-cover"
               priority
             />
           </div>
@@ -201,7 +207,7 @@ export default function HomePage() {
               alt="Neighborhood-serving retail and public realm concept rendering"
               width={1600}
               height={900}
-              className="h-full w-full object-cover transition duration-700 hover:scale-[1.02] motion-reduce:transform-none"
+              className="h-full w-full object-cover"
             />
           </div>
           <figcaption className="space-y-2">
