@@ -69,21 +69,15 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="space-y-16 pb-6">
-      <section className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-        <Image
-          src="/images/5501forward.logo.png"
-          alt="5501 Forward — Listening First. Planning Responsibly."
-          width={1200}
-          height={400}
-          className="h-auto w-full max-w-xl"
-          priority
-        />
-      </section>
-      <section className="grid gap-8 lg:grid-cols-2 lg:items-center">
+    <div className="space-y-20 pb-6">
+      <section className="animate-in-view grid gap-10 lg:grid-cols-2 lg:items-center">
         <div className="space-y-5">
-          <p className="text-sm font-semibold uppercase tracking-[0.12em] text-slate-600">Denver Redevelopment Initiative</p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">5501 Forward: 5501 E. 33rd Avenue</h1>
+          <p className="inline-flex rounded-full border border-[#D2BC93] bg-[#F8F3E9] px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#6F5531]">DENVER REDEVELOPMENT INITIATIVE</p>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">5501 E. 33rd Avenue</h1>
+          <div className="space-y-1 border-l-2 border-[#C6A56F] pl-4">
+            <p className="text-lg font-semibold text-slate-900">5501 Forward</p>
+            <p className="text-base font-medium text-[#7A6140]">Listening First. Planning Responsibly.</p>
+          </div>
           <p className="text-lg text-slate-700">
             A Denver redevelopment initiative connecting community priorities, public-sector tools, and responsible capital.
           </p>
@@ -93,26 +87,26 @@ export default function HomePage() {
             33rd Avenue in Denver.
           </p>
           <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
-            <Link href="/project" className="rounded-lg bg-slate-900 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-slate-700">
+            <Link href="/project" className="rounded-lg bg-slate-900 px-5 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-700">
               View Project Overview →
             </Link>
-            <Link href="/execution-roadmap" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50">
+            <Link href="/execution-roadmap" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#B99963] hover:bg-[#F9F6EF]">
               Explore the Roadmap →
             </Link>
-            <Link href="/contact" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50">
+            <Link href="/contact" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#B99963] hover:bg-[#F9F6EF]">
               Contact Project Team →
             </Link>
           </div>
         </div>
 
         <figure className="space-y-3">
-          <div className="overflow-hidden rounded-2xl border border-slate-200">
+          <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm transition duration-500 hover:shadow-md motion-reduce:transition-none">
             <Image
               src="/images/5501-33rd-6story-context-rendering.jpg"
               alt="Conceptual redevelopment rendering for 5501 Forward"
               width={1600}
               height={1067}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover transition duration-700 hover:scale-[1.02] motion-reduce:transform-none"
               priority
             />
           </div>
@@ -123,19 +117,19 @@ export default function HomePage() {
         </figure>
       </section>
 
-      <section className="space-y-6">
+      <section className="animate-in-view space-y-6">
         <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Project Snapshot</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {projectSnapshot.map((item) => (
-            <article key={item.title} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">{item.title}</h3>
+            <article key={item.title} className="card-lift rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-[#7A6140]">{item.title}</h3>
               <p className="mt-2 text-base leading-7 text-slate-800">{item.detail}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+      <section className="animate-in-view space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
         <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Why This Site Matters</h2>
         <p className="text-base leading-7 text-slate-700">
           5501 Forward is focused on reinvestment in an underutilized site with potential to support housing need,
@@ -145,11 +139,11 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="space-y-6">
+      <section className="animate-in-view space-y-6">
         <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Current Workstreams</h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {workstreams.map((item) => (
-            <article key={item.title} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <article key={item.title} className="card-lift rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
               <h3 className="text-lg font-semibold tracking-tight text-slate-900">{item.title}</h3>
               <p className="mt-2 text-sm leading-6 text-slate-700">{item.detail}</p>
             </article>
@@ -157,8 +151,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid gap-6 lg:grid-cols-2">
-        <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="animate-in-view grid gap-6 lg:grid-cols-2">
+        <article className="card-lift rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Public Partner Alignment</h2>
           <p className="mt-3 text-base leading-7 text-slate-700">
             The project is being organized for productive conversations with city officials, redevelopment agencies,
@@ -168,7 +162,7 @@ export default function HomePage() {
           </p>
         </article>
 
-        <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <article className="card-lift rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Capital Readiness</h2>
           <p className="mt-3 text-base leading-7 text-slate-700">
             5501 Forward is preparing for disciplined discussions with lenders, private equity, and mission-aligned
@@ -178,7 +172,7 @@ export default function HomePage() {
         </article>
       </section>
 
-      <section className="space-y-5 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+      <section className="animate-in-view space-y-5 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Consultant Group</h2>
           <Link href="/team" className="text-sm font-semibold text-slate-900 underline-offset-4 hover:underline">
@@ -191,14 +185,14 @@ export default function HomePage() {
         </p>
         <ul className="grid gap-3 sm:grid-cols-2">
           {consultantGroup.map((member) => (
-            <li key={member} className="rounded-lg border border-slate-200 bg-white p-4 text-sm leading-6 text-slate-800">
+            <li key={member} className="card-lift rounded-lg border border-slate-200 bg-white p-4 text-sm leading-6 text-slate-800">
               {member}
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="space-y-4">
+      <section className="animate-in-view space-y-4">
         <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Visual Context</h2>
         <figure className="space-y-3 rounded-2xl border border-slate-200 p-4 sm:p-5">
           <div className="overflow-hidden rounded-xl">
@@ -207,7 +201,7 @@ export default function HomePage() {
               alt="Neighborhood-serving retail and public realm concept rendering"
               width={1600}
               height={900}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover transition duration-700 hover:scale-[1.02] motion-reduce:transform-none"
             />
           </div>
           <figcaption className="space-y-2">
@@ -217,13 +211,13 @@ export default function HomePage() {
         </figure>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-slate-900 p-8 text-white sm:p-10">
+      <section className="animate-in-view rounded-2xl border border-slate-200 bg-slate-900 p-8 text-white sm:p-10">
         <h2 className="text-3xl font-semibold tracking-tight">Listening first. Planning responsibly.</h2>
         <p className="mt-4 max-w-3xl text-base leading-7 text-slate-100">
           For project inquiries, community feedback, public partner coordination, consultant input, or capital partner
           discussions, contact the project team.
         </p>
-        <Link href="/contact" className="mt-6 inline-flex rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-200">
+        <Link href="/contact" className="mt-6 inline-flex rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-200">
           Contact Project Team →
         </Link>
       </section>
