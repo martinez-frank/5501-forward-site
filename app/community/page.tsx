@@ -44,7 +44,7 @@ export default function CommunityPage() {
           priority
         />
         <p className="mt-4 text-center text-sm font-semibold uppercase tracking-[0.16em] text-[#0B223F]">Listening First. Planning Responsibly.</p>
-        <h1 className="mt-4 text-center text-3xl font-bold tracking-tight text-[#0B223F] sm:text-4xl">A community vision effort for 5501 E. 33rd Avenue</h1>
+        <h1 className="mt-4 text-center text-2xl font-bold tracking-tight text-[#0B223F] sm:text-3xl">A community vision effort for 5501 E. 33rd Avenue</h1>
         <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-[#0B223F]">
           We are studying whether this property can become a stronger neighborhood asset through thoughtful mixed-use planning, possible neighborhood-serving retail, new housing opportunities, improved street presence, and long-term community investment.
         </p>
@@ -66,9 +66,10 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      <section id="site-location" className="space-y-3 rounded-2xl border border-[#D99A19] bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-[#0B223F]">Where the Site Is Located</h2>
-        <p className="leading-7 text-[#0B223F]">
+      <section id="site-location" className="space-y-3 rounded-2xl border border-[#D99A19] bg-[#0B223F] p-5 text-white shadow-sm">
+        <div className="h-1 w-16 rounded-full bg-[#D99A19]" aria-hidden />
+        <h2 className="text-2xl font-bold text-white">Where the Site Is Located</h2>
+        <p className="leading-7 text-white">
           The project site is located at 5501 E. 33rd Avenue in Denver. This location is being studied for potential mixed-use reinvestment that could better connect with neighborhood needs and street-level activity.
         </p>
       </section>
@@ -93,8 +94,9 @@ export default function CommunityPage() {
         <p className="rounded-xl border border-[#D99A19] bg-[#F7F3EA] px-4 py-3 text-sm text-[#0B223F]">{renderingDisclaimer}</p>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="border-l-4 border-[#D99A19] pl-3 text-2xl font-bold text-[#0B223F]">Design Scenarios Being Studied</h2>
+      <section className="space-y-4 rounded-2xl border border-[#D99A19] bg-[#0B223F] p-5 text-white shadow-sm">
+        <div className="h-1 w-16 rounded-full bg-[#D99A19]" aria-hidden />
+        <h2 className="text-2xl font-bold text-white">Design Scenarios Being Studied</h2>
         <div className="grid gap-4 md:grid-cols-2">
           <figure className="space-y-3 rounded-2xl border border-[#D99A19] bg-white p-4 shadow-sm">
             <Image src="/images/5501-33rd-6story-context-rendering.jpg" alt="Context study scenario concept" width={1600} height={1067} className="h-auto w-full rounded-xl border border-[#D99A19]" />
@@ -135,8 +137,9 @@ export default function CommunityPage() {
         <a href={`mailto:${publicEmail}`} className="inline-flex w-full items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#0B223F] sm:w-auto">Email the Project Team</a>
       </section>
 
-      <section className="space-y-4 rounded-2xl border border-[#D99A19] bg-white p-5 shadow-sm sm:p-6">
-        <h2 className="text-2xl font-bold text-[#0B223F]">How Community Feedback Will Be Used</h2>
+      <section className="space-y-4 rounded-2xl border border-[#D99A19] bg-[#0B223F] p-5 text-white shadow-sm sm:p-6">
+        <div className="h-1 w-16 rounded-full bg-[#D99A19]" aria-hidden />
+        <h2 className="text-2xl font-bold text-white">How Community Feedback Will Be Used</h2>
         <div className="grid gap-3 md:grid-cols-3">
           {[
             ['Identify Priorities', 'Clarify what matters most to neighbors and nearby stakeholders.'],
@@ -174,6 +177,13 @@ export default function CommunityPage() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="space-y-4 rounded-2xl border border-[#D99A19] bg-[#0B223F] p-6 text-white shadow-sm">
+        <div className="h-1 w-16 rounded-full bg-[#D99A19]" aria-hidden />
+        <h2 className="text-2xl font-bold">Stay Involved</h2>
+        <p className="leading-7 text-white">As planning continues, project updates and future engagement opportunities will be shared with community members who request to stay informed.</p>
+        <a href={`mailto:${publicEmail}`} className="inline-flex w-full items-center justify-center rounded-lg border border-[#D99A19] bg-white px-5 py-3 text-sm font-semibold text-[#0B223F] sm:w-auto">Request Project Updates</a>
       </section>
     </div>
   )
