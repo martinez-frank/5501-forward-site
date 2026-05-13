@@ -59,7 +59,13 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
           <nav className="hidden flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-600 lg:flex">
             {navItems.map(([label, href]) => (
-              <Link key={href} href={href} className="transition-colors duration-200 hover:text-[#8E6F3E]">
+              <Link
+                key={href}
+                href={href}
+                target={href === '/community' ? '_blank' : undefined}
+                rel={href === '/community' ? 'noopener noreferrer' : undefined}
+                className="transition-colors duration-200 hover:text-[#8E6F3E]"
+              >
                 {label}
               </Link>
             ))}
@@ -75,6 +81,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   <li key={href}>
                     <Link
                       href={href}
+                      target={href === '/community' ? '_blank' : undefined}
+                      rel={href === '/community' ? 'noopener noreferrer' : undefined}
                       className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition duration-200 hover:bg-slate-100 hover:text-slate-900"
                     >
                       {label}
