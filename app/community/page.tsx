@@ -46,15 +46,15 @@ export default function CommunityPage() {
         <p className="mt-4 text-center text-[12px] font-semibold uppercase tracking-[0.14em] text-[#0B223F] sm:text-[13px]">
           Listening First. Planning Responsibly.
         </p>
-        <h1 className="mx-auto mt-3 max-w-[760px] text-center text-[21px] font-bold leading-[1.2] tracking-tight text-[#0B223F] sm:mt-4 sm:text-[26px]">
+        <p className="mx-auto mt-3 max-w-[760px] text-center text-xl font-normal leading-snug text-[#0B223F] sm:mt-4 sm:text-2xl">
           A community vision effort for 5501 E. 33rd Avenue
-        </h1>
+        </p>
         <p className="mx-auto mt-3 max-w-[820px] text-center text-[15px] leading-7 text-[#0B223F] sm:mt-4 sm:text-[16px]">
           We are studying whether this property can become a stronger neighborhood asset through thoughtful mixed-use planning, possible neighborhood-serving retail, new housing opportunities, improved street presence, and long-term community investment.
         </p>
         <div className="mt-5 flex flex-col justify-center gap-3 sm:mt-6 sm:flex-row">
           <a href="#site-location" className="rounded-lg bg-[#0B223F] px-5 py-3 text-center text-sm font-semibold text-white">View the Site</a>
-          <a href="#share-feedback" className="rounded-lg border border-[#0B223F] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0B223F]">Share Feedback (Updated)</a>
+          <a href="#share-feedback" className="rounded-lg border border-[#0B223F] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0B223F]">Share Feedback</a>
         </div>
       </section>
 
