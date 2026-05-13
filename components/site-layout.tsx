@@ -28,7 +28,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <Link href="/community" className="inline-flex items-center" aria-label="5501 Forward Community Vision Page">
               <Image src="/images/5501forward.logo.png" alt="5501 Forward" width={180} height={61} className="h-auto w-[140px] sm:w-[170px]" priority />
             </Link>
-            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-600">COMMUNITY VISION PAGE</span>
           </div>
         </header>
         <main className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-10">{children}</main>
@@ -36,8 +35,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div className="mx-auto w-full max-w-4xl space-y-1 px-4 py-6 text-sm text-slate-600 sm:px-6">
             <p className="font-medium text-slate-800">5501 Forward</p>
             <p>Listening First. Planning Responsibly.</p>
-            <p>Preliminary community vision page</p>
-                      </div>
+          </div>
         </footer>
       </div>
     )

@@ -49,10 +49,6 @@ export default function CommunityPage() {
         <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-slate-700">
           We are studying whether this property can become a stronger neighborhood asset through thoughtful mixed-use planning, possible neighborhood-serving retail, new housing opportunities, improved street presence, and long-term community investment.
         </p>
-        <div className="mx-auto mt-5 max-w-3xl rounded-xl border border-[#d9b56a] bg-[#fbf1d8] p-4 text-center">
-          <p className="text-lg font-semibold text-[#5f4a24]">No final design has been approved.</p>
-          <p className="mt-1 text-sm font-medium text-[#5f4a24]">Community input will help guide the next steps.</p>
-        </div>
         <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
           <a href="#site-location" className="rounded-lg bg-[#12284c] px-5 py-3 text-center text-sm font-semibold text-white">View the Site</a>
           <a href="#share-feedback" className="rounded-lg border border-[#12284c] bg-white px-5 py-3 text-center text-sm font-semibold text-[#12284c]">Share Feedback</a>
@@ -124,36 +120,49 @@ export default function CommunityPage() {
         <h2 className="text-2xl font-bold text-[#12284c]">Design Values Being Studied</h2>
         <ul className="grid gap-3 sm:grid-cols-2">
           {['Site conditions', 'Neighborhood fit', 'Ground-floor uses', 'Responsible planning', 'Walkability and safer street experience', 'Public-realm improvements where feasible'].map((item) => (
-            <li key={item} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">{item}</li>
+            <li key={item} className="rounded-lg border border-[#b8cbed] bg-white px-4 py-3 text-sm font-medium text-[#14355f]">{item}</li>
           ))}
         </ul>
       </section>
 
-      <section className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-[#12284c]">What Should This Corner Offer?</h2>
-        <p className="leading-7 text-slate-700">What would you like this corner to offer the neighborhood?</p>
+      <section className="space-y-4 rounded-2xl border border-[#193a66] bg-[#eaf2ff] p-5 shadow-sm sm:p-6">
+        <div className="border-l-4 border-[#d9b56a] pl-3">
+          <h2 className="text-2xl font-bold text-[#12284c]">What would you like this corner to offer the neighborhood?</h2>
+        </div>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {feedbackOptions.map((item) => (
-            <li key={item} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">{item}</li>
+            <li key={item} className="rounded-lg border border-[#b8cbed] bg-white px-4 py-3 text-sm font-medium text-[#14355f]">{item}</li>
           ))}
         </ul>
-        <p className="text-sm leading-6 text-slate-700">This list is intended to gather early community preferences. It does not represent a final tenant plan or commitment.</p>
+        <p className="text-sm leading-6 text-[#244d7e]">This list is intended to gather early community preferences. It does not represent a final tenant plan or commitment.</p>
       </section>
 
-      <section id="share-feedback" className="space-y-3 rounded-2xl border border-[#0d1d39] bg-[#12284c] p-6 text-white shadow-sm">
+      <section id="share-feedback" className="space-y-4 rounded-2xl border border-[#0d1d39] bg-[#12284c] p-6 text-white shadow-sm">
+        <div className="h-1 w-16 rounded-full bg-[#d9b56a]" aria-hidden />
         <h2 className="text-3xl font-bold">We Want to Hear From You</h2>
         <p className="text-slate-100">What would you like this corner to offer the neighborhood?</p>
         <a href={`mailto:${publicEmail}`} className="inline-flex w-full items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#12284c] sm:w-auto">Email the Project Team</a>
       </section>
 
-      <section className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+      <section className="space-y-4 rounded-2xl border border-[#c8d8f0] bg-[#f1f6ff] p-5 shadow-sm sm:p-6">
         <h2 className="text-2xl font-bold text-[#12284c]">How Community Feedback Will Be Used</h2>
-        <p className="leading-7 text-slate-700">Input collected during this outreach phase will inform design priorities, scenario refinement, and future conversations with city staff and community stakeholders.</p>
+        <div className="grid gap-3 md:grid-cols-3">
+          {[
+            ['Identify Priorities', 'Clarify what matters most to neighbors and nearby stakeholders.'],
+            ['Understand Concerns', 'Document questions and concerns to address in future planning.'],
+            ['Refine the Concept', 'Use input to guide responsible next-step concept refinements.'],
+          ].map(([title, detail]) => (
+            <article key={title} className="rounded-xl border border-[#b8cbed] bg-white p-4">
+              <h3 className="text-sm font-bold uppercase tracking-[0.12em] text-[#14355f]">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">{detail}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
-      <section className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+      <section className="space-y-3 rounded-2xl border border-[#17345a] bg-[#e6f0ff] p-5 shadow-sm">
         <h2 className="text-2xl font-bold text-[#12284c]">Where the Project Stands</h2>
-        <p className="leading-7 text-slate-700">The project remains in preliminary planning and due diligence. No final design, height, unit count, retail mix, financing package, or construction timeline has been approved.</p>
+        <p className="rounded-xl border border-[#b8cbed] bg-white px-4 py-3 leading-7 text-slate-700">The project remains in preliminary planning and due diligence. No final design, height, unit count, retail mix, financing package, or construction timeline has been approved.</p>
       </section>
 
       <section className="space-y-4 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
