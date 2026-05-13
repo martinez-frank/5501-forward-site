@@ -34,7 +34,7 @@ const publicEmail = '5501forward@buildersgeneralconstruction.com'
 export default function CommunityPage() {
   return (
     <div className="mx-auto w-full max-w-5xl space-y-8 bg-[#F7F3EA] pb-10 text-[#0B223F] sm:space-y-10">
-      <section className="rounded-3xl border border-[#D99A19] bg-white p-5 shadow-sm sm:p-8">
+      <section className="rounded-3xl border border-[#D99A19] bg-white px-5 py-9 shadow-sm sm:px-8 sm:py-14">
         <Image
           src="/images/5501forward.logo.png"
           alt="5501 Forward — Listening First. Planning Responsibly."
@@ -43,12 +43,16 @@ export default function CommunityPage() {
           className="mx-auto h-auto w-full max-w-[500px]"
           priority
         />
-        <p className="mt-4 text-center text-sm font-semibold uppercase tracking-[0.16em] text-[#0B223F]">Listening First. Planning Responsibly.</p>
-        <h1 className="mt-4 text-center text-2xl font-bold tracking-tight text-[#0B223F] sm:text-3xl">A community vision effort for 5501 E. 33rd Avenue</h1>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-[#0B223F]">
+        <p className="mt-4 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-[#0B223F] sm:text-[14px]">
+          Listening First. Planning Responsibly.
+        </p>
+        <h1 className="mx-auto mt-3 max-w-[780px] text-center text-[22px] font-bold leading-[1.2] tracking-tight text-[#0B223F] sm:mt-4 sm:text-[28px]">
+          A community vision effort for 5501 E. 33rd Avenue
+        </h1>
+        <p className="mx-auto mt-3 max-w-[840px] text-center text-[15px] leading-[1.62] text-[#0B223F] sm:mt-4 sm:text-[17px]">
           We are studying whether this property can become a stronger neighborhood asset through thoughtful mixed-use planning, possible neighborhood-serving retail, new housing opportunities, improved street presence, and long-term community investment.
         </p>
-        <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+        <div className="mt-6 flex flex-col justify-center gap-3 sm:mt-7 sm:flex-row">
           <a href="#site-location" className="rounded-lg bg-[#0B223F] px-5 py-3 text-center text-sm font-semibold text-white">View the Site</a>
           <a href="#share-feedback" className="rounded-lg border border-[#0B223F] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0B223F]">Share Feedback</a>
         </div>
