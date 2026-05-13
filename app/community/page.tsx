@@ -15,56 +15,58 @@ const glanceItems = [
   ['Design', 'Preliminary concepts only'],
 ] as const
 
+const feedbackOptions = [
+  'Coffee shop / café',
+  'Small grocery or neighborhood market',
+  'Restaurant',
+  'Childcare or family services',
+  'Health, wellness, or fitness',
+  'Local retail / maker space',
+  'Professional services',
+  'Community gathering space',
+  'Other',
+]
+
 const renderingDisclaimer =
   'Images shown are preliminary and intended for community discussion only. Final design, building height, unit count, retail layout, parking configuration, and project scope remain subject to further due diligence, community input, financing, and City and County of Denver review.'
 
+const publicEmail = '5501forward@buildersgeneralconstruction.com'
+
 export default function CommunityPage() {
   return (
-    <div className="mx-auto w-full max-w-5xl space-y-8 pb-10 text-slate-800 sm:space-y-10">
-      <section className="rounded-3xl border border-slate-300 bg-white p-5 text-center shadow-sm sm:p-8">
+    <div className="mx-auto w-full max-w-5xl space-y-7 pb-10 text-slate-800 sm:space-y-9">
+      <section className="rounded-3xl border border-[#d8c9a2] bg-white p-5 shadow-sm sm:p-8">
         <Image
           src="/images/5501forward.logo.png"
           alt="5501 Forward — Listening First. Planning Responsibly."
-          width={500}
-          height={170}
-          className="mx-auto h-auto w-full max-w-[360px]"
+          width={600}
+          height={204}
+          className="mx-auto h-auto w-full max-w-[460px]"
           priority
         />
-        <p className="mt-3 text-sm font-semibold uppercase tracking-[0.16em] text-[#7b602f]">Listening First. Planning Responsibly.</p>
-        <div className="mx-auto mt-5 max-w-3xl space-y-4 text-base leading-7 text-slate-700">
-          <p>
-            5501 Forward is a community vision effort for 5501 E. 33rd Avenue. The project team is studying whether this
-            site can become a stronger neighborhood asset through thoughtful mixed-use planning, possible neighborhood-serving
-            retail, new housing opportunities, improved street presence, and long-term community investment.
-          </p>
-          <p>
-            This project is still in an early planning, due diligence, and outreach phase. No final design has been approved.
-            Before advancing the concept further, the project team wants to hear from neighbors, local businesses, community
-            organizations, and nearby stakeholders.
-          </p>
+        <p className="mt-4 text-center text-sm font-semibold uppercase tracking-[0.16em] text-[#7b602f]">Listening First. Planning Responsibly.</p>
+        <h1 className="mt-4 text-center text-3xl font-bold tracking-tight text-[#12284c] sm:text-4xl">A community vision effort for 5501 E. 33rd Avenue</h1>
+        <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-slate-700">
+          We are studying whether this property can become a stronger neighborhood asset through thoughtful mixed-use planning, possible neighborhood-serving retail, new housing opportunities, improved street presence, and long-term community investment.
+        </p>
+        <div className="mx-auto mt-5 max-w-3xl rounded-xl border border-[#d9b56a] bg-[#fbf1d8] p-4 text-center">
+          <p className="text-lg font-semibold text-[#5f4a24]">No final design has been approved.</p>
+          <p className="mt-1 text-sm font-medium text-[#5f4a24]">Community input will help guide the next steps.</p>
         </div>
         <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-          <a href="#site-location" className="rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white">View the Site</a>
-          <a href="#share-feedback" className="rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-900">Share Feedback</a>
+          <a href="#site-location" className="rounded-lg bg-[#12284c] px-5 py-3 text-center text-sm font-semibold text-white">View the Site</a>
+          <a href="#share-feedback" className="rounded-lg border border-[#12284c] bg-white px-5 py-3 text-center text-sm font-semibold text-[#12284c]">Share Feedback</a>
         </div>
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-3 text-sm font-semibold text-slate-700">
-          <a href="#preliminary-vision" className="underline underline-offset-4">Vision</a>
-          <span className="text-slate-300">|</span>
-          <a href="#design-scenarios" className="underline underline-offset-4">Design Studies</a>
-          <span className="text-slate-300">|</span>
-          <a href="#faq" className="underline underline-offset-4">FAQ</a>
-        </div>
-        <p className="mt-6 rounded-xl border border-[#D9B56A] bg-[#FBF1D8] px-4 py-3 text-sm font-medium text-[#5f4a24]">
-          Preliminary concept only. Final project scope remains subject to due diligence, community input, financing, and
-          City and County of Denver review.
+        <p className="mt-6 rounded-xl border border-[#d9b56a] bg-[#fff6e4] px-4 py-3 text-sm font-medium text-[#5f4a24]">
+          Preliminary concept only. Final project scope remains subject to due diligence, community input, financing, and City and County of Denver review.
         </p>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-slate-900">At a Glance</h2>
+        <h2 className="border-l-4 border-[#d9b56a] pl-3 text-2xl font-bold text-[#12284c]">At a Glance</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {glanceItems.map(([title, detail]) => (
-            <article key={title} className="rounded-xl border border-slate-300 bg-white p-4 shadow-sm">
+            <article key={title} className="rounded-xl border border-[#ddd6c7] bg-white p-4 shadow-sm">
               <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-[#7b602f]">{title}</h3>
               <p className="mt-2 text-sm leading-6">{detail}</p>
             </article>
@@ -72,102 +74,98 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      <section id="site-location" className="space-y-3 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Where the Site Is Located</h2>
+      <section id="site-location" className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">Where the Site Is Located</h2>
         <p className="leading-7 text-slate-700">
-          The project site is at 5501 E. 33rd Avenue in Denver. This location is being studied for potential mixed-use reinvestment
-          that could better connect with neighborhood needs and street-level activity.
+          The project site is located at 5501 E. 33rd Avenue in Denver. This location is being studied for potential mixed-use reinvestment that could better connect with neighborhood needs and street-level activity.
         </p>
       </section>
 
-      <section className="space-y-4 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Planning and Zoning Context</h2>
+      <section className="space-y-4 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">Existing Site Conditions</h2>
         <p className="leading-7 text-slate-700">
-          The zoning map is included to help orient the community to the surrounding planning context. It is not a final
-          entitlement determination and does not represent project approval.
+          Before any final concept is advanced, the project team is reviewing the site as it exists today, including frontage, access, surrounding uses, pedestrian experience, environmental considerations, and long-term improvement opportunities.
         </p>
         <figure className="space-y-3">
-          <Image src="/images/5501-zoning-map.png" alt="Zoning context map for 5501 E. 33rd Avenue" width={1400} height={1000} className="h-auto w-full rounded-xl border border-slate-200" />
-          <figcaption className="text-sm text-slate-700">City and County of Denver zoning context map — planning discussion only.</figcaption>
+          <Image src="/images/5501-existing-site.jpg" alt="5501 E. 33rd Avenue existing site condition" width={1600} height={1067} className="h-auto w-full rounded-xl border border-slate-200" />
+          <figcaption className="text-sm text-slate-700">Existing site photo — current site condition</figcaption>
         </figure>
-        <p className="rounded-xl border border-[#D9B56A] bg-[#FBF1D8] px-4 py-3 text-sm text-[#5f4a24]">
-          Zoning context shown for planning discussion only. Project feasibility, entitlement path, and final development program
-          remain subject to professional review and City and County of Denver approval.
-        </p>
       </section>
 
-      <section className="space-y-3 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Existing Site Conditions</h2>
-        <p className="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-4 text-slate-700">Existing site photo pending upload.</p>
-      </section>
-
-      <section className="space-y-3 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Why This Site Matters</h2>
+      <section className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">Why This Site Matters</h2>
         <p className="leading-7 text-slate-700">This corner may have long-term potential to support neighborhood-serving retail activity, housing opportunities, and a safer, more welcoming street presence. The current stage is focused on listening, due diligence, and understanding what responsible reinvestment could look like for this part of the neighborhood.</p>
       </section>
 
-      <section id="preliminary-vision" className="space-y-4 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Preliminary Neighborhood Vision</h2>
+      <section className="space-y-4 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">Preliminary Neighborhood Vision</h2>
         <figure className="space-y-3">
-          <Image src="/images/5501-3story-rendering.jpg" alt="Preliminary mixed-use neighborhood concept rendering" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
-          <figcaption className="text-sm font-semibold text-slate-800">Neighborhood-Serving Mixed-Use Concept — Not Final</figcaption>
+          <Image src="/images/5501-3story-rendering.jpg" alt="Preliminary neighborhood-serving mixed-use concept" width={1600} height={900} className="h-auto w-full rounded-xl border border-slate-200" />
+          <figcaption className="text-sm font-semibold text-slate-800">Neighborhood-serving mixed-use concept — not final</figcaption>
         </figure>
-        <p className="rounded-xl border border-[#D9B56A] bg-[#FBF1D8] px-4 py-3 text-sm text-[#5f4a24]">{renderingDisclaimer}</p>
+        <p className="rounded-xl border border-[#d9b56a] bg-[#fbf1d8] px-4 py-3 text-sm text-[#5f4a24]">{renderingDisclaimer}</p>
       </section>
 
-      <section id="design-scenarios" className="space-y-4">
-        <h2 className="text-2xl font-bold text-slate-900">Design Scenarios Being Studied</h2>
+      <section className="space-y-4">
+        <h2 className="border-l-4 border-[#d9b56a] pl-3 text-2xl font-bold text-[#12284c]">Design Scenarios Being Studied</h2>
         <div className="grid gap-4 md:grid-cols-2">
-          <figure className="space-y-3 rounded-2xl border border-slate-300 bg-white p-4 shadow-sm">
-            <Image src="/images/5501-33rd-6story-context-rendering.jpg" alt="Lower-Scale Context Study rendering" width={1600} height={1067} className="h-auto w-full rounded-xl border border-slate-200" />
-            <figcaption className="text-sm font-semibold text-slate-800">Lower-Scale Context Study</figcaption>
+          <figure className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-4 shadow-sm">
+            <Image src="/images/5501-33rd-6story-context-rendering.jpg" alt="Context study scenario concept" width={1600} height={1067} className="h-auto w-full rounded-xl border border-slate-200" />
+            <figcaption className="text-sm font-semibold text-slate-800">Context study scenario — not final</figcaption>
           </figure>
-          <figure className="space-y-3 rounded-2xl border border-slate-300 bg-white p-4 shadow-sm">
-            <Image src="/images/5501-33rd-10story-stepback-rendering.jpg" alt="Stepback Housing Study rendering" width={1600} height={1067} className="h-auto w-full rounded-xl border border-slate-200" />
-            <figcaption className="text-sm font-semibold text-slate-800">Stepback Housing Study</figcaption>
+          <figure className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-4 shadow-sm">
+            <Image src="/images/5501-33rd-10story-stepback-rendering.jpg" alt="Stepback massing study scenario concept" width={1600} height={1067} className="h-auto w-full rounded-xl border border-slate-200" />
+            <figcaption className="text-sm font-semibold text-slate-800">Stepback massing study scenario — not final</figcaption>
           </figure>
         </div>
-        <p className="rounded-xl border border-[#D9B56A] bg-[#FBF1D8] px-4 py-3 text-sm text-[#5f4a24]">{renderingDisclaimer}</p>
       </section>
 
-      <section className="space-y-3 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Design Values Being Studied</h2>
+      <section className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">Design Values Being Studied</h2>
         <ul className="grid gap-3 sm:grid-cols-2">
-          {['Walkability and street safety', 'Neighborhood-serving retail potential', 'Context-sensitive building transitions', 'Durable materials and long-term stewardship', 'Livability and access considerations', 'Public-realm and corner identity improvements'].map((item) => (
+          {['Site conditions', 'Neighborhood fit', 'Ground-floor uses', 'Responsible planning', 'Walkability and safer street experience', 'Public-realm improvements where feasible'].map((item) => (
             <li key={item} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">{item}</li>
           ))}
         </ul>
       </section>
 
-      <section className="space-y-3 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">What Should This Corner Offer?</h2>
-        <p className="leading-7 text-slate-700">Community feedback is especially helpful on neighborhood-serving uses, safety and mobility priorities, building character, and concerns that should be addressed before any concept moves forward.</p>
+      <section className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">What Should This Corner Offer?</h2>
+        <p className="leading-7 text-slate-700">What would you like this corner to offer the neighborhood?</p>
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {feedbackOptions.map((item) => (
+            <li key={item} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">{item}</li>
+          ))}
+        </ul>
+        <p className="text-sm leading-6 text-slate-700">This list is intended to gather early community preferences. It does not represent a final tenant plan or commitment.</p>
       </section>
 
-      <section id="share-feedback" className="space-y-3 rounded-2xl border border-slate-300 bg-slate-900 p-6 text-white shadow-sm">
-        <h2 className="text-2xl font-bold">Share Feedback by Email</h2>
-        <p className="text-slate-100">We want to hear from neighbors, local businesses, and community organizations.</p>
-        <button type="button" aria-disabled className="w-full rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 sm:w-auto">Email contact coming soon</button>
+      <section id="share-feedback" className="space-y-3 rounded-2xl border border-[#0d1d39] bg-[#12284c] p-6 text-white shadow-sm">
+        <h2 className="text-3xl font-bold">We Want to Hear From You</h2>
+        <p className="text-slate-100">What would you like this corner to offer the neighborhood?</p>
+        <a href={`mailto:${publicEmail}`} className="inline-flex w-full items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#12284c] sm:w-auto">Email the Project Team</a>
       </section>
 
-      <section className="space-y-3 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">How Community Feedback Will Be Used</h2>
-        <p className="leading-7 text-slate-700">Input gathered during this phase will help shape design priorities, refine study scenarios, and inform future conversations with city staff and community stakeholders.</p>
+      <section className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">How Community Feedback Will Be Used</h2>
+        <p className="leading-7 text-slate-700">Input collected during this outreach phase will inform design priorities, scenario refinement, and future conversations with city staff and community stakeholders.</p>
       </section>
 
-      <section className="space-y-3 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Where the Project Stands</h2>
-        <p className="leading-7 text-slate-700">The project remains in early planning, due diligence, and outreach. No final design, zoning path, financing package, building height, unit count, retail tenant mix, or construction timeline has been approved.</p>
+      <section className="space-y-3 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">Where the Project Stands</h2>
+        <p className="leading-7 text-slate-700">The project remains in preliminary planning and due diligence. No final design, height, unit count, retail mix, financing package, or construction timeline has been approved.</p>
       </section>
 
-      <section id="faq" className="space-y-4 rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">FAQ</h2>
+      <section className="space-y-4 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">FAQ</h2>
         <div className="space-y-3">
           {[
-            ['Is this project approved?', 'No. This page describes an early planning and outreach phase only.'],
-            ['Has a final building height been selected?', 'No. Different scale options are still being studied.'],
-            ['Is the unit count final?', 'No. Unit count and program mix remain under review.'],
-            ['Can community feedback still influence the concept?', 'Yes. Feedback is being requested before further advancement.'],
+            ['Has this project been approved?', 'No. It remains in preliminary planning and outreach.'],
+            ['Is the building height decided?', 'No. Height is still being studied and no final decision has been made.'],
+            ['Is the concept image the final design?', 'No. Images are preliminary and for community discussion only.'],
+            ['What type of retail is planned?', 'No final tenant mix has been selected or approved.'],
+            ['Can neighbors still shape the plan?', 'Yes. Community feedback is being requested before further advancement.'],
+            ['How will my feedback be used?', 'Feedback will help inform design priorities and scenario refinement.'],
           ].map(([question, answer]) => (
             <article key={question} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <h3 className="font-semibold text-slate-900">{question}</h3>
@@ -177,9 +175,10 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-slate-300 bg-white p-5 shadow-sm">
-        <h2 className="text-2xl font-bold text-slate-900">Stay Involved</h2>
-        <p className="mt-3 leading-7 text-slate-700">This page will be updated as community outreach continues and as preliminary studies evolve through due diligence and ongoing public input.</p>
+      <section className="space-y-4 rounded-2xl border border-[#ddd6c7] bg-white p-5 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#12284c]">Stay Involved</h2>
+        <p className="leading-7 text-slate-700">This page is part of an early effort to listen, learn, and gather input before the project concept advances further. If you live nearby, work nearby, own property in the area, operate a local business, or represent a community organization, we welcome your feedback.</p>
+        <a href={`mailto:${publicEmail}`} className="inline-flex w-full items-center justify-center rounded-lg bg-[#12284c] px-5 py-3 text-sm font-semibold text-white sm:w-auto">Email the Project Team</a>
       </section>
     </div>
   )
