@@ -29,7 +29,35 @@ const feedbackOptions = [
 const renderingDisclaimer =
   'Images shown are preliminary and intended for community discussion only. Final design, building height, unit count, retail layout, parking configuration, and project scope remain subject to further due diligence, community input, financing, and City and County of Denver review.'
 
-const publicEmail = 'communityfeedback@5501forward.com'
+const feedbackEmail = 'communityfeedback@5501forward.com'
+
+const feedbackSubject = 'Community Feedback for 5501 E. 33rd Avenue'
+
+const feedbackBody = `Hello 5501 Forward Project Team,
+
+I would like to share feedback regarding the possible future planning for 5501 E. 33rd Avenue.
+
+1. My feedback, questions, concerns, or ideas:
+
+
+2. What I would like this corner to offer the neighborhood:
+
+
+3. My current position:
+[ ] I am generally supportive of thoughtful redevelopment at this location.
+[ ] I may be supportive, but I have questions or concerns.
+[ ] I have concerns about redevelopment at this location.
+[ ] I need more information before forming an opinion.
+
+Optional:
+Name:
+Nearby resident / business / stakeholder:
+Phone:
+Best email:
+
+Thank you.`
+
+const feedbackHref = `mailto:${feedbackEmail}?subject=${encodeURIComponent(feedbackSubject)}&body=${encodeURIComponent(feedbackBody)}`
 
 export default function CommunityPage() {
   return (
@@ -138,7 +166,7 @@ export default function CommunityPage() {
         <div className="h-1 w-16 rounded-full bg-[#D99A19]" aria-hidden />
         <h2 className="text-3xl font-bold">We Want to Hear From You</h2>
         <p className="text-white">What would you like this corner to offer the neighborhood?</p>
-        <a href={`mailto:${publicEmail}`} className="inline-flex w-full items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#0B223F] sm:w-auto">Email the Project Team</a>
+        <a href={feedbackHref} className="inline-flex w-full items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#0B223F] sm:w-auto">Email the Project Team</a>
       </section>
 
       <section className="space-y-4 rounded-2xl border border-[#D99A19] bg-[#0B223F] p-5 text-white shadow-sm sm:p-6">
@@ -187,7 +215,7 @@ export default function CommunityPage() {
         <div className="h-1 w-16 rounded-full bg-[#D99A19]" aria-hidden />
         <h2 className="text-2xl font-bold">Stay Involved</h2>
         <p className="leading-7 text-white">As planning continues, project updates and future engagement opportunities will be shared with community members who request to stay informed.</p>
-        <a href={`mailto:${publicEmail}`} className="inline-flex w-full items-center justify-center rounded-lg border border-[#D99A19] bg-white px-5 py-3 text-sm font-semibold text-[#0B223F] sm:w-auto">Request Project Updates</a>
+        <a href={`mailto:${feedbackEmail}`} className="inline-flex w-full items-center justify-center rounded-lg border border-[#D99A19] bg-white px-5 py-3 text-sm font-semibold text-[#0B223F] sm:w-auto">Request Project Updates</a>
       </section>
     </div>
   )
