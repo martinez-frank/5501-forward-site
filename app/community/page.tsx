@@ -29,7 +29,7 @@ const feedbackOptions = [
 const renderingDisclaimer =
   'Images shown are preliminary and intended for community discussion only. Final design, building height, unit count, retail layout, parking configuration, and project scope remain subject to further due diligence, community input, financing, and City and County of Denver review.'
 
-const publicEmail = '5501forward@buildersgeneralconstruction.com'
+const publicEmail = 'communityfeedback@5501forward.com'
 
 export default function CommunityPage() {
   return (
