@@ -15,10 +15,10 @@ const snapshotCards = [
 export default function ProjectPage() {
   return (
     <div className="space-y-16 pb-8">
-      <section className="rounded-3xl border border-[#d9c79c] bg-[#f7f5ef] p-6 sm:p-10">
+      <section className="rounded-3xl border border-slate-200 bg-[#faf9f6] p-6 sm:p-10">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div className="space-y-5">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#8E6F3E]">5501 Forward</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b78a2f]">5501 Forward</p>
             <h1 className="text-4xl font-bold tracking-tight text-[#12263a] sm:text-5xl">Project Overview</h1>
             <h2 className="text-xl font-semibold text-[#1f3b57]">A disciplined redevelopment study for a stronger neighborhood corner.</h2>
             <p className="text-base leading-relaxed text-slate-700">5501 Forward is an early-stage redevelopment platform evaluating whether 5501 E. 33rd Avenue can support a responsible, financeable, and community-responsive mixed-use future.</p>
@@ -26,13 +26,13 @@ export default function ProjectPage() {
             <div className="flex flex-wrap gap-3">
               <Link href="/execution-roadmap" className="rounded-md bg-[#12263a] px-4 py-2 text-sm font-semibold text-white">Explore the Roadmap</Link>
               <Link href="/development-strategy" className="rounded-md border border-[#12263a] px-4 py-2 text-sm font-semibold text-[#12263a]">View Development Strategy</Link>
-              <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-md border border-[#8E6F3E] px-4 py-2 text-sm font-semibold text-[#8E6F3E]">Community Vision Page ↗</Link>
-              <Link href="/contact" className="rounded-md bg-[#8E6F3E] px-4 py-2 text-sm font-semibold text-white">Contact Project Team</Link>
+              <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-md border border-[#b78a2f] px-4 py-2 text-sm font-semibold text-[#12263a]">Community Vision Page ↗</Link>
+              <Link href="/contact" className="rounded-md bg-[#12263a] px-4 py-2 text-sm font-semibold text-white">Contact Project Team</Link>
             </div>
           </div>
-          <figure className="overflow-hidden rounded-2xl border border-[#d9c79c] bg-white">
+          <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
             <Image src="/images/5501-existing-site.jpg" alt="Existing site condition at 5501 E. 33rd Avenue" width={1400} height={900} className="h-full w-full object-cover" priority />
-            <figcaption className="border-t border-[#e9ddbf] px-4 py-3 text-sm text-slate-700">Existing site condition — 5501 E. 33rd Avenue</figcaption>
+            <figcaption className="border-t border-slate-200 px-4 py-3 text-sm text-slate-700">Existing site condition — 5501 E. 33rd Avenue</figcaption>
           </figure>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function ProjectPage() {
         <h3 className="text-3xl font-bold text-[#12263a]">Project Snapshot</h3>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {snapshotCards.map(([label, value]) => (
-            <article key={label} className="rounded-xl border-t-4 border-[#8E6F3E] bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <article key={label} className="rounded-xl border-t-2 border-[#b78a2f] bg-white p-5 shadow-sm ring-1 ring-slate-200">
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">{label}</p>
               <p className="mt-2 text-sm font-medium text-[#12263a]">{value}</p>
             </article>
@@ -61,7 +61,7 @@ export default function ProjectPage() {
             'Potential alignment between private investment and public-sector goals',
             'Long-term neighborhood reinvestment',
           ].map((item) => (
-            <li key={item} className="rounded-lg border border-[#8E6F3E] bg-[#17324d] p-4 text-sm">{item}</li>
+            <li key={item} className="rounded-lg border border-[#b78a2f]/60 bg-[#17324d] p-4 text-sm">{item}</li>
           ))}
         </ul>
       </section>
@@ -111,7 +111,7 @@ export default function ProjectPage() {
             </figure>
           ))}
         </div>
-        <p className="rounded-xl border-l-4 border-[#8E6F3E] bg-[#f7f5ef] p-4 text-sm text-slate-700">Conceptual image for discussion purposes only. Final design, height, density, unit count, retail layout, parking configuration, financing, approvals, and construction scope remain subject to due diligence, community input, entitlement review, public process, and project underwriting.</p>
+        <p className="rounded-xl border-l-4 border-[#b78a2f] bg-[#faf9f6] p-4 text-sm text-slate-700">Conceptual image for discussion purposes only. Final design, height, density, unit count, retail layout, parking configuration, financing, approvals, and construction scope remain subject to due diligence, community input, entitlement review, public process, and project underwriting.</p>
       </section>
 
       <section className="rounded-3xl bg-[#12263a] p-6 text-white sm:p-10">
@@ -125,7 +125,7 @@ export default function ProjectPage() {
             ['Entitlement Strategy', 'Evaluate approvals, zoning pathways, public process, and city review requirements.'],
             ['Capital Readiness', 'Organize the diligence package, project narrative, cost assumptions, and funding path before advancing.'],
           ].map(([title, copy]) => (
-            <article key={title} className="rounded-xl border border-[#8E6F3E] bg-[#17324d] p-4">
+            <article key={title} className="rounded-xl border border-[#b78a2f]/60 bg-[#17324d] p-4">
               <h4 className="font-semibold">{title}</h4>
               <p className="mt-2 text-sm text-slate-200">{copy}</p>
             </article>
@@ -146,7 +146,7 @@ export default function ProjectPage() {
             ['6', 'Final Scope and Execution Decision', 'Only after the prior gates are validated can a final go/no-go recommendation be considered.'],
           ].map(([n, title, copy]) => (
             <article key={n} className="rounded-xl bg-white p-5 ring-1 ring-slate-200">
-              <p className="text-xl font-bold text-[#8E6F3E]">Gate {n}</p>
+              <p className="text-xl font-bold text-[#b78a2f]">Gate {n}</p>
               <h4 className="mt-1 text-lg font-semibold text-[#12263a]">{title}</h4>
               <p className="mt-2 text-sm text-slate-700">{copy}</p>
             </article>
@@ -159,7 +159,7 @@ export default function ProjectPage() {
         <p className="text-slate-700">The project team is evaluating whether a future redevelopment could support public-facing benefits while remaining financially and technically feasible.</p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {['More active street edge','Neighborhood-serving retail or services','New housing opportunities','Improved frontage and pedestrian experience','Long-term reinvestment in the site','Potential public-private alignment'].map((item) => (
-            <article key={item} className="rounded-xl border-l-4 border-[#8E6F3E] bg-white p-4 ring-1 ring-slate-200 text-sm text-[#12263a]">Potential benefit being evaluated: {item}</article>
+            <article key={item} className="rounded-xl border-l-4 border-[#b78a2f] bg-white p-4 ring-1 ring-slate-200 text-sm text-[#12263a]">Potential benefit being evaluated: {item}</article>
           ))}
         </div>
       </section>
@@ -174,7 +174,7 @@ export default function ProjectPage() {
             'The capital structure must support responsible execution.',
             'Community and public-sector feedback must be understood before advancing.',
             'Construction feasibility must be tested through GC input.',
-          ].map((item) => <article key={item} className="rounded-xl border-l-4 border-[#8E6F3E] bg-[#17324d] p-4 text-sm">{item}</article>)}
+          ].map((item) => <article key={item} className="rounded-xl border-l-4 border-[#b78a2f] bg-[#17324d] p-4 text-sm">{item}</article>)}
         </div>
       </section>
 
@@ -192,7 +192,7 @@ export default function ProjectPage() {
         <Link href="/team" className="inline-flex rounded-md bg-[#12263a] px-4 py-2 text-sm font-semibold text-white">Meet the Project Team</Link>
       </section>
 
-      <section className="rounded-2xl border border-[#d9c79c] bg-[#f7f5ef] p-5 text-sm leading-relaxed text-slate-700">
+      <section className="rounded-2xl border border-slate-200 bg-[#faf9f6] p-5 text-sm leading-relaxed text-slate-700">
         All images, program assumptions, building heights, unit counts, retail layouts, parking concepts, financing structures, public incentives, timelines, and construction scope remain preliminary and subject to due diligence, community input, financing, entitlement review, public agency review, and City and County of Denver approval.
       </section>
 
@@ -201,8 +201,8 @@ export default function ProjectPage() {
         <div className="mt-5 flex flex-wrap gap-3">
           <Link href="/execution-roadmap" className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#12263a]">Explore the Roadmap</Link>
           <Link href="/development-strategy" className="rounded-md border border-white px-4 py-2 text-sm font-semibold text-white">View Development Strategy</Link>
-          <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-md border border-[#d9c79c] px-4 py-2 text-sm font-semibold text-[#f6e6c2]">Community Vision Page ↗</Link>
-          <Link href="/contact" className="rounded-md bg-[#8E6F3E] px-4 py-2 text-sm font-semibold text-white">Contact Project Team</Link>
+          <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-md border border-[#b78a2f] bg-white px-4 py-2 text-sm font-semibold text-[#12263a]">Community Vision Page ↗</Link>
+          <Link href="/contact" className="rounded-md bg-[#12263a] px-4 py-2 text-sm font-semibold text-white">Contact Project Team</Link>
         </div>
       </section>
     </div>
