@@ -7,10 +7,9 @@ import { usePathname } from 'next/navigation'
 
 const navItems = [
   ['Project', '/project'],
-  ['Community', '/community'],
-  ['Execution Roadmap', '/execution-roadmap'],
+  ['Roadmap', '/execution-roadmap'],
+  ['Strategy', '/development-economics'],
   ['Investor Brief', '/investor-brief'],
-  ['Development Economics', '/development-economics'],
   ['Team', '/team'],
   ['Documents', '/documents'],
   ['Contact', '/contact'],
@@ -62,8 +61,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <Link
                 key={href}
                 href={href}
-                target={href === '/community' ? '_blank' : undefined}
-                rel={href === '/community' ? 'noopener noreferrer' : undefined}
                 className="transition-colors duration-200 hover:text-[#8E6F3E]"
               >
                 {label}
@@ -81,8 +78,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   <li key={href}>
                     <Link
                       href={href}
-                      target={href === '/community' ? '_blank' : undefined}
-                      rel={href === '/community' ? 'noopener noreferrer' : undefined}
                       className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition duration-200 hover:bg-slate-100 hover:text-slate-900"
                     >
                       {label}

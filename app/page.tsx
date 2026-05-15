@@ -2,223 +2,194 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const renderingDisclaimer =
-  'Conceptual image for discussion purposes only. Final design, height, density, approvals, financing, and construction scope remain subject to due diligence, entitlement review, public process, and project underwriting.'
+const statusCards = [
+  ['Current Phase', 'Early planning + due diligence'],
+  ['Community Outreach', 'Active listening phase'],
+  ['Consultant Input', 'Architect / GC / project advisory group assembled'],
+  ['Entitlement Strategy', 'Being evaluated'],
+  ['Capital Readiness', 'Pre-development positioning underway'],
+  ['Design Status', 'Conceptual only — not approved'],
+] as const
 
-const projectSnapshot = [
+const decisionGates = [
   {
-    title: 'Address',
-    detail: '5501 E. 33rd Avenue, Denver, Colorado',
+    title: 'Site + Environmental Review',
+    detail: 'Existing conditions, ESA, infrastructure, and risk are being studied under preliminary due diligence.',
   },
   {
-    title: 'Project Type',
-    detail: 'Mixed-use redevelopment opportunity',
-  },
-  {
-    title: 'Current Phase',
-    detail: 'Predevelopment, environmental diligence, entitlement strategy, and capital readiness',
-  },
-  {
-    title: 'Focus Areas',
+    title: 'Market + Program Fit',
     detail:
-      'Housing potential, neighborhood-serving commercial space, public-private financing pathways, and community benefit',
+      'Retail, housing, parking, affordability, and neighborhood benefit are under evaluation and subject to review.',
   },
-]
+  {
+    title: 'Entitlement Path',
+    detail: 'Height, zoning, public process, and city alignment are conceptual and subject to approvals.',
+  },
+  {
+    title: 'Capital Strategy',
+    detail:
+      'Pre-development budget, sponsor equity, debt, and public tools are being evaluated for preliminary fit.',
+  },
+  {
+    title: 'Final Development Direction',
+    detail: 'Approved scope, budget, timeline, and delivery plan remain subject to due diligence and final review.',
+  },
+] as const
 
-const workstreams = [
-  {
-    title: 'Phase II ESA preparation',
-    detail: 'Environmental investigation planning and consultant coordination are underway, subject to due diligence.',
-  },
-  {
-    title: 'Entitlement and zoning strategy',
-    detail: 'Entitlement pathways and zoning positioning are being evaluated and will remain subject to approvals.',
-  },
-  {
-    title: 'DURA/TIF exploration',
-    detail: 'Potential redevelopment-tool alignment is in exploration for discussion with relevant public partners.',
-  },
-  {
-    title: 'CHFA/LIHTC positioning',
-    detail: 'Affordable-housing capital stack positioning is being reviewed for fit, timing, and program eligibility.',
-  },
-  {
-    title: 'Design and feasibility refinement',
-    detail: 'Concept-level design and feasibility assumptions are being refined through iterative consultant input.',
-  },
-  {
-    title: 'Capital partner readiness',
-    detail: 'Materials are being organized to support lender and equity conversations under disciplined underwriting.',
-  },
-]
+const stakeholderPreview = [
+  'Open Decisions',
+  'Consultant Workstreams',
+  'Risk Register',
+  'Document Library',
+  'Capital Readiness',
+  'Meeting Notes',
+] as const
 
 const consultantGroup = [
-  'Terry Johnson: Project sponsor / owner representative / developer contact',
-  'Frank Martinez: Project consultant',
-  'Lucy Van Dusen, LCVD Architecture: Architect partner',
-  'Mike Jameson: General Contractor A',
-  'Klaus Hirtler: General Contractor B',
-  'Raymond Nelson: General Contractor',
-]
+  'Terry Johnson — Owner / Developer',
+  'Frank Martinez — Project Consultant',
+  'Lucy Van Dusen, LCVD Architecture — Architect Partner',
+  'Mike Jameson — General Contractor A',
+  'Klaus Hirtler — General Contractor B',
+  'Raymond Nelson — General Contractor',
+] as const
 
 export const metadata: Metadata = {
-  title: '5501 Forward | 5501 E. 33rd Avenue Denver Redevelopment Initiative',
+  title: '5501 Forward | Executive Project Dashboard',
   description:
-    '5501 Forward is a Denver redevelopment initiative for 5501 E. 33rd Avenue, connecting community priorities, public-sector tools, environmental diligence, entitlement strategy, and responsible capital.',
+    'Executive homepage dashboard for 5501 Forward covering project status, decision gates, stakeholder pathways, and consultant coordination.',
 }
 
 export default function HomePage() {
   return (
-    <div className="space-y-20 pb-6">
-      <section className="grid gap-10 lg:grid-cols-2 lg:items-center">
+    <div className="space-y-16 pb-8">
+      <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="space-y-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6F5531]">DENVER REDEVELOPMENT INITIATIVE</p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">5501 Forward</h1>
-          <p className="text-xl font-medium text-slate-800 sm:text-2xl">Listening First. Planning Responsibly.</p>
-          <p className="text-lg text-slate-700">
+          <Image src="/images/5501forward.logo.png" alt="5501 Forward" width={220} height={74} className="h-auto w-[180px] sm:w-[220px]" priority />
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#7a6140]">DENVER REDEVELOPMENT INITIATIVE</p>
+          <h1 className="text-4xl font-semibold tracking-tight text-[#0d1b2a] sm:text-5xl">5501 Forward</h1>
+          <p className="text-xl font-medium text-[#223247]">Listening First. Planning Responsibly.</p>
+          <p className="text-lg text-[#1f2f43]">
             A civic redevelopment platform connecting community priorities, public-sector tools, and responsible capital.
           </p>
           <p className="text-base leading-7 text-slate-700">
             Early-stage planning is underway for a potential mixed-use future in Denver, with focus on environmental
             diligence, entitlement strategy, consultant input, and capital readiness.
           </p>
-          <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap">
-            <Link href="/project" className="rounded-lg bg-slate-900 px-5 py-3 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-slate-700">
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Link href="/project" className="rounded-lg bg-[#0d1b2a] px-5 py-3 text-center text-sm font-semibold text-white hover:bg-[#13263a]">
               View Project Overview →
             </Link>
-            <Link href="/execution-roadmap" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition-colors duration-200 hover:border-[#B99963] hover:bg-[#F9F6EF]">
+            <Link href="/execution-roadmap" className="rounded-lg border border-[#c9ab74] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-[#faf6ed]">
               Explore the Roadmap →
             </Link>
-            <Link href="/contact" className="rounded-lg border border-slate-300 px-5 py-3 text-center text-sm font-semibold text-slate-800 transition-colors duration-200 hover:border-[#B99963] hover:bg-[#F9F6EF]">
-              Contact Project Team →
-            </Link>
-            <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-[#B99963] bg-[#F9F6EF] px-5 py-3 text-center text-sm font-semibold text-slate-900 transition-colors duration-200 hover:bg-[#F2E9D8]">
+            <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-[#c9ab74] bg-[#faf6ed] px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-[#f3ead8]">
               Community Vision Page ↗
+            </Link>
+            <Link href="/contact" className="rounded-lg border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-50">
+              Contact Project Team →
             </Link>
           </div>
         </div>
 
         <figure className="space-y-3">
-          <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
-            <Image
-              src="/images/5501-33rd-6story-context-rendering.jpg"
-              alt="Conceptual redevelopment rendering for 5501 Forward"
-              width={1600}
-              height={1067}
-              className="h-full w-full object-cover"
-              priority
-            />
+          <div className="overflow-hidden rounded-2xl border border-[#d7c5a2]">
+            <Image src="/images/5501-33rd-6story-context-rendering.jpg" alt="Conceptual rendering for 5501 Forward" width={1600} height={1067} className="h-full w-full object-cover" priority />
           </div>
-          <figcaption className="space-y-2">
-            <p className="text-sm font-semibold text-slate-800">Conceptual redevelopment vision</p>
-            <p className="text-sm leading-6 text-slate-600">{renderingDisclaimer}</p>
+          <figcaption className="border-l-2 border-[#c9ab74] pl-3 text-sm leading-6 text-slate-600">
+            Conceptual image for discussion purposes only. Final design, height, density, approvals, financing, and
+            construction scope remain subject to due diligence, entitlement review, public process, and project
+            underwriting.
           </figcaption>
         </figure>
       </section>
 
-      <section className="animate-in-view space-y-6">
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Project Snapshot</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {projectSnapshot.map((item) => (
-            <article key={item.title} className="card-lift rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-[#7A6140]">{item.title}</h3>
-              <p className="mt-2 text-base leading-7 text-slate-800">{item.detail}</p>
+      <section className="space-y-5">
+        <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Project Status Dashboard</h2>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {statusCards.map(([title, detail]) => (
+            <article key={title} className="rounded-xl border border-slate-200 bg-white p-5">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#7a6140]">{title}</p>
+              <p className="mt-2 text-base text-slate-800">{detail}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="animate-in-view space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Why This Site Matters</h2>
+      <section className="space-y-5 rounded-2xl border border-[#d7c5a2] bg-[#0d1b2a] p-6 text-white sm:p-8">
+        <h2 className="text-3xl font-semibold tracking-tight">Decision Gates</h2>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+          {decisionGates.map((gate, index) => (
+            <article key={gate.title} className="rounded-xl border border-white/20 bg-white/5 p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d9bf8e]">Gate {index + 1}</p>
+              <h3 className="mt-2 text-base font-semibold">{gate.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-200">{gate.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="space-y-5 rounded-2xl border border-slate-200 bg-[#f8f5ee] p-6 sm:p-8">
+        <div className="flex items-center justify-between gap-3">
+          <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Owner / Stakeholder Dashboard</h2>
+          <span className="rounded-full border border-[#c9ab74] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#7a6140]">Coming Soon</span>
+        </div>
         <p className="text-base leading-7 text-slate-700">
-          5501 Forward is focused on reinvestment in an underutilized site with potential to support housing need,
-          neighborhood-serving commercial activation, and public realm improvement. Current planning emphasizes
-          environmental and entitlement diligence so redevelopment pathways can be evaluated responsibly and aligned with
-          community priorities and public-sector planning frameworks.
+          A future private planning dashboard can organize project decisions, consultant updates, documents, risks, and
+          capital-readiness workstreams for the ownership and stakeholder group.
         </p>
-      </section>
-
-      <section className="animate-in-view space-y-6">
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Current Workstreams</h2>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {workstreams.map((item) => (
-            <article key={item.title} className="card-lift rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-              <h3 className="text-lg font-semibold tracking-tight text-slate-900">{item.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-700">{item.detail}</p>
-            </article>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {stakeholderPreview.map((item) => (
+            <div key={item} className="rounded-lg border border-slate-200 bg-white p-4 text-sm font-medium text-slate-800">{item}</div>
           ))}
         </div>
       </section>
 
-      <section className="animate-in-view grid gap-6 lg:grid-cols-2">
-        <article className="card-lift rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Public Partner Alignment</h2>
-          <p className="mt-3 text-base leading-7 text-slate-700">
-            The project is being organized for productive conversations with city officials, redevelopment agencies,
-            housing partners, community stakeholders, public finance partners, and infrastructure and environmental
-            diligence partners. Engagement planning supports coordination and information-sharing and does not imply
-            agency approval, commitment, or final program selection.
-          </p>
-        </article>
-
-        <article className="card-lift rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-          <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Capital Readiness</h2>
-          <p className="mt-3 text-base leading-7 text-slate-700">
-            5501 Forward is preparing for disciplined discussions with lenders, private equity, and mission-aligned
-            capital providers. Current work includes predevelopment funding dialogue, diligence packaging, and
-            underwriting-readiness materials to support informed evaluation.
-          </p>
-        </article>
+      <section className="space-y-5">
+        <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Audience Pathways</h2>
+        <div className="grid gap-4 lg:grid-cols-3">
+          <article className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="text-lg font-semibold text-[#0d1b2a]">For Community Members</h3>
+            <Link href="/community" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-semibold text-[#7a6140] hover:underline">Community Vision Page ↗</Link>
+          </article>
+          <article className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="text-lg font-semibold text-[#0d1b2a]">For Project Stakeholders</h3>
+            <div className="mt-3 flex flex-col gap-2 text-sm font-semibold text-[#0d1b2a]">
+              <Link href="/project" className="hover:underline">Project Overview</Link>
+              <Link href="/execution-roadmap" className="hover:underline">Execution Roadmap</Link>
+              <Link href="/team" className="hover:underline">Team</Link>
+            </div>
+          </article>
+          <article className="rounded-xl border border-slate-200 bg-white p-5">
+            <h3 className="text-lg font-semibold text-[#0d1b2a]">For Capital / Advisory Review</h3>
+            <div className="mt-3 flex flex-col gap-2 text-sm font-semibold text-[#0d1b2a]">
+              <Link href="/development-economics" className="hover:underline">Strategy</Link>
+              <Link href="/investor-brief" className="hover:underline">Investor Brief</Link>
+              <Link href="/documents" className="hover:underline">Documents</Link>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section className="animate-in-view space-y-5 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Consultant Group</h2>
-          <Link href="/team" className="text-sm font-semibold text-slate-900 underline-offset-4 hover:underline">
-            Meet the Project Team
-          </Link>
-        </div>
+      <section className="space-y-5">
+        <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Consultant Group Preview</h2>
         <p className="text-base leading-7 text-slate-700">
           Current consultant group supporting early-stage feasibility, design review, entitlement strategy, and
-          construction input:
+          construction input.
         </p>
-        <ul className="grid gap-3 sm:grid-cols-2">
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {consultantGroup.map((member) => (
-            <li key={member} className="card-lift rounded-lg border border-slate-200 bg-white p-4 text-sm leading-6 text-slate-800">
-              {member}
-            </li>
+            <li key={member} className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-800">{member}</li>
           ))}
         </ul>
       </section>
 
-      <section className="animate-in-view space-y-4">
-        <h2 className="text-3xl font-semibold tracking-tight text-slate-900">Visual Context</h2>
-        <figure className="space-y-3 rounded-2xl border border-slate-200 p-4 sm:p-5">
-          <div className="overflow-hidden rounded-xl">
-            <Image
-              src="/images/5501-3story-rendering.jpg"
-              alt="Neighborhood-serving retail and public realm concept rendering"
-              width={1600}
-              height={900}
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <figcaption className="space-y-2">
-            <p className="text-sm font-semibold text-slate-800">Neighborhood-serving retail / public realm concept</p>
-            <p className="text-sm leading-6 text-slate-600">{renderingDisclaimer}</p>
-          </figcaption>
-        </figure>
-      </section>
-
-      <section className="animate-in-view rounded-2xl border border-slate-200 bg-slate-900 p-8 text-white sm:p-10">
-        <h2 className="text-3xl font-semibold tracking-tight">Listening first. Planning responsibly.</h2>
-        <p className="mt-4 max-w-3xl text-base leading-7 text-slate-100">
-          For project inquiries, community feedback, public partner coordination, consultant input, or capital partner
-          discussions, contact the project team.
-        </p>
-        <Link href="/contact" className="mt-6 inline-flex rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-200">
-          Contact Project Team →
-        </Link>
+      <section className="rounded-2xl border border-[#c9ab74] bg-[#0d1b2a] p-8 text-white">
+        <h2 className="text-3xl font-semibold tracking-tight">Move the project forward responsibly.</h2>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <Link href="/execution-roadmap" className="rounded-lg bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-100">Explore the Roadmap →</Link>
+          <Link href="/contact" className="rounded-lg border border-white/40 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-white/10">Contact Project Team →</Link>
+        </div>
       </section>
     </div>
   )
