@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 const navItems = [
   ['Project', '/project'],
   ['Roadmap', '/execution-roadmap'],
-  ['Strategy', '/development-economics'],
+  ['Strategy', '/development-strategy'],
   ['Investor Brief', '/investor-brief'],
   ['Team', '/team'],
   ['Documents', '/documents'],
