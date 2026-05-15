@@ -64,7 +64,7 @@ export default function HomePage() {
   return (
     <div className="space-y-16 pb-8">
       <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div className="space-y-4 sm:space-y-5">
+        <div className="space-y-3 sm:space-y-4">
           <Image
             src="/images/5501forward.logo.png"
             alt="5501 Forward logo"
@@ -74,8 +74,6 @@ export default function HomePage() {
             priority
           />
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#f2c14e]">DENVER REDEVELOPMENT INITIATIVE</p>
-          <h1 className="text-4xl font-semibold tracking-tight text-[#0d1b2a] sm:text-5xl">5501 E. 33rd Avenue</h1>
-          <p className="text-xl font-medium text-[#223247]">Listening first. Planning responsibly.</p>
           <p className="text-lg text-[#1f2f43]">
             A community-informed redevelopment platform for 5501 E. 33rd Avenue in Denver, linking public priorities, consultant diligence, and responsible capital planning.
           </p>
