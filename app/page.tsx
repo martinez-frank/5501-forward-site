@@ -64,23 +64,23 @@ export default function HomePage() {
   return (
     <div className="space-y-16 pb-8">
       <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div className="space-y-3 sm:space-y-4">
+        <div className="pt-1">
           <Image
             src="/images/5501forward.logo.png"
             alt="5501 Forward logo"
             width={520}
             height={120}
-            className="h-auto w-[170px] sm:w-[220px] lg:w-[280px] xl:w-[320px]"
+            className="h-auto w-[220px] sm:w-[280px] lg:w-[320px]"
             priority
           />
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#f2c14e]">DENVER REDEVELOPMENT INITIATIVE</p>
-          <p className="text-lg text-[#1f2f43]">
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-[#f2c14e]">DENVER REDEVELOPMENT INITIATIVE</p>
+          <p className="mt-5 max-w-[62ch] text-lg text-[#1f2f43]">
             A community-informed redevelopment platform for 5501 E. 33rd Avenue in Denver, linking public priorities, consultant diligence, and responsible capital planning.
           </p>
-          <p className="text-base leading-7 text-slate-700">
+          <p className="mt-5 max-w-[62ch] text-base leading-7 text-slate-700">
             Early-stage planning is underway for a potential mixed-use future, including environmental and entitlement review, multidisciplinary consultant coordination, and disciplined pre-development capital strategy.
           </p>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
             <Link href="/project" className="rounded-lg bg-[#0d1b2a] px-5 py-3 text-center text-sm font-semibold text-white hover:bg-[#13263a]">
               View Project Overview →
             </Link>
@@ -103,7 +103,7 @@ export default function HomePage() {
               alt="Conceptual rendering for 5501 E. 33rd Avenue"
               width={1600}
               height={1067}
-              className="h-full w-full object-cover object-[center_60%]"
+            className="h-full w-full object-cover object-center"
               priority
             />
           </div>
