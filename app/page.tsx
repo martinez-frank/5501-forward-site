@@ -64,13 +64,13 @@ export default function HomePage() {
   return (
     <div className="space-y-16 pb-8">
       <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div className="space-y-3 sm:space-y-4">
+        <div className="space-y-2.5 sm:space-y-3.5">
           <Image
             src="/images/5501forward.logo.png"
             alt="5501 Forward logo"
             width={520}
             height={120}
-            className="h-auto w-[170px] sm:w-[220px] lg:w-[280px] xl:w-[320px]"
+            className="h-auto w-[200px] sm:w-[240px] lg:w-[320px] xl:w-[360px]"
             priority
           />
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#f2c14e]">DENVER REDEVELOPMENT INITIATIVE</p>
