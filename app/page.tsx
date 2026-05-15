@@ -65,25 +65,23 @@ export default function HomePage() {
     <div className="space-y-16 pb-8">
       <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="space-y-5">
-          <Image src="/images/5501forward.logo.png" alt="5501 Forward" width={220} height={74} className="h-auto w-[180px] sm:w-[220px]" priority />
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#7a6140]">DENVER REDEVELOPMENT INITIATIVE</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0d1b2a]">DENVER REDEVELOPMENT INITIATIVE</p>
           <h1 className="text-4xl font-semibold tracking-tight text-[#0d1b2a] sm:text-5xl">5501 Forward</h1>
-          <p className="text-xl font-medium text-[#223247]">Listening First. Planning Responsibly.</p>
+          <p className="text-xl font-medium text-[#223247]">Listening first. Planning responsibly.</p>
           <p className="text-lg text-[#1f2f43]">
-            A civic redevelopment platform connecting community priorities, public-sector tools, and responsible capital.
+            A community-informed redevelopment platform linking public priorities, consultant diligence, and responsible capital planning.
           </p>
           <p className="text-base leading-7 text-slate-700">
-            Early-stage planning is underway for a potential mixed-use future in Denver, with focus on environmental
-            diligence, entitlement strategy, consultant input, and capital readiness.
+            Early-stage planning is underway for a potential mixed-use future in Denver, including environmental and entitlement review, multidisciplinary consultant coordination, and disciplined pre-development capital strategy.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             <Link href="/project" className="rounded-lg bg-[#0d1b2a] px-5 py-3 text-center text-sm font-semibold text-white hover:bg-[#13263a]">
               View Project Overview →
             </Link>
-            <Link href="/execution-roadmap" className="rounded-lg border border-[#c9ab74] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-[#faf6ed]">
+            <Link href="/execution-roadmap" className="rounded-lg border border-[#0d1b2a] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-50">
               Explore the Roadmap →
             </Link>
-            <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-[#c9ab74] bg-[#faf6ed] px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-[#f3ead8]">
+            <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-[#d4a63a] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-[#fffaf0]">
               Community Vision Page ↗
             </Link>
             <Link href="/contact" className="rounded-lg border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-50">
@@ -93,13 +91,11 @@ export default function HomePage() {
         </div>
 
         <figure className="space-y-3">
-          <div className="overflow-hidden rounded-2xl border border-[#d7c5a2]">
-            <Image src="/images/5501-33rd-6story-context-rendering.jpg" alt="Conceptual rendering for 5501 Forward" width={1600} height={1067} className="h-full w-full object-cover" priority />
+          <div className="overflow-hidden rounded-2xl border border-slate-200">
+            <Image src="/images/5501-3story-rendering.jpg" alt="Conceptual rendering for 5501 Forward" width={1600} height={1067} className="h-full w-full object-cover" priority />
           </div>
-          <figcaption className="border-l-2 border-[#c9ab74] pl-3 text-sm leading-6 text-slate-600">
-            Conceptual image for discussion purposes only. Final design, height, density, approvals, financing, and
-            construction scope remain subject to due diligence, entitlement review, public process, and project
-            underwriting.
+          <figcaption className="border-l-2 border-[#d4a63a] pl-3 text-sm leading-6 text-slate-600">
+            Conceptual image for discussion purposes only. Final design, approvals, and scope remain subject to due diligence, entitlement review, and public process.
           </figcaption>
         </figure>
       </section>
@@ -109,19 +105,19 @@ export default function HomePage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {statusCards.map(([title, detail]) => (
             <article key={title} className="rounded-xl border border-slate-200 bg-white p-5">
-              <p className="text-sm font-semibold uppercase tracking-wide text-[#7a6140]">{title}</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-[#0d1b2a]">{title}</p>
               <p className="mt-2 text-base text-slate-800">{detail}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="space-y-5 rounded-2xl border border-[#d7c5a2] bg-[#0d1b2a] p-6 text-white sm:p-8">
+      <section className="space-y-5 rounded-2xl border border-slate-200 bg-[#0d1b2a] p-6 text-white sm:p-8">
         <h2 className="text-3xl font-semibold tracking-tight">Decision Gates</h2>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
           {decisionGates.map((gate, index) => (
             <article key={gate.title} className="rounded-xl border border-white/20 bg-white/5 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d9bf8e]">Gate {index + 1}</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f2c14e]">Gate {index + 1}</p>
               <h3 className="mt-2 text-base font-semibold">{gate.title}</h3>
               <p className="mt-2 text-sm leading-6 text-slate-200">{gate.detail}</p>
             </article>
@@ -129,10 +125,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="space-y-5 rounded-2xl border border-slate-200 bg-[#f8f5ee] p-6 sm:p-8">
+      <section className="space-y-5 rounded-2xl border border-slate-200 bg-[#fffdf8] p-6 sm:p-8">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Owner / Stakeholder Dashboard</h2>
-          <span className="rounded-full border border-[#c9ab74] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#7a6140]">Coming Soon</span>
+          <span className="rounded-full border border-[#d4a63a] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#0d1b2a]">Coming Soon</span>
         </div>
         <p className="text-base leading-7 text-slate-700">
           A future private planning dashboard can organize project decisions, consultant updates, documents, risks, and
@@ -150,7 +146,7 @@ export default function HomePage() {
         <div className="grid gap-4 lg:grid-cols-3">
           <article className="rounded-xl border border-slate-200 bg-white p-5">
             <h3 className="text-lg font-semibold text-[#0d1b2a]">For Community Members</h3>
-            <Link href="/community" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-semibold text-[#7a6140] hover:underline">Community Vision Page ↗</Link>
+            <Link href="/community" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm font-semibold text-[#0d1b2a] hover:underline">Community Vision Page ↗</Link>
           </article>
           <article className="rounded-xl border border-slate-200 bg-white p-5">
             <h3 className="text-lg font-semibold text-[#0d1b2a]">For Project Stakeholders</h3>
@@ -184,7 +180,7 @@ export default function HomePage() {
         </ul>
       </section>
 
-      <section className="rounded-2xl border border-[#c9ab74] bg-[#0d1b2a] p-8 text-white">
+      <section className="rounded-2xl border border-slate-200 bg-[#0d1b2a] p-8 text-white">
         <h2 className="text-3xl font-semibold tracking-tight">Move the project forward responsibly.</h2>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Link href="/execution-roadmap" className="rounded-lg bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-100">Explore the Roadmap →</Link>
