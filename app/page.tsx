@@ -65,14 +65,22 @@ export default function HomePage() {
     <div className="space-y-16 pb-8">
       <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="space-y-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0d1b2a]">DENVER REDEVELOPMENT INITIATIVE</p>
-          <h1 className="text-4xl font-semibold tracking-tight text-[#0d1b2a] sm:text-5xl">5501 Forward</h1>
+          <Image
+            src="/images/5501forward.logo.png"
+            alt="5501 Forward logo"
+            width={520}
+            height={120}
+            className="h-auto w-[220px] sm:w-[280px]"
+            priority
+          />
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#f2c14e]">DENVER REDEVELOPMENT INITIATIVE</p>
+          <h1 className="text-4xl font-semibold tracking-tight text-[#0d1b2a] sm:text-5xl">5501 E. 33rd Avenue</h1>
           <p className="text-xl font-medium text-[#223247]">Listening first. Planning responsibly.</p>
           <p className="text-lg text-[#1f2f43]">
-            A community-informed redevelopment platform linking public priorities, consultant diligence, and responsible capital planning.
+            A community-informed redevelopment platform for 5501 E. 33rd Avenue in Denver, linking public priorities, consultant diligence, and responsible capital planning.
           </p>
           <p className="text-base leading-7 text-slate-700">
-            Early-stage planning is underway for a potential mixed-use future in Denver, including environmental and entitlement review, multidisciplinary consultant coordination, and disciplined pre-development capital strategy.
+            Early-stage planning is underway for a potential mixed-use future, including environmental and entitlement review, multidisciplinary consultant coordination, and disciplined pre-development capital strategy.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             <Link href="/project" className="rounded-lg bg-[#0d1b2a] px-5 py-3 text-center text-sm font-semibold text-white hover:bg-[#13263a]">
@@ -81,20 +89,27 @@ export default function HomePage() {
             <Link href="/execution-roadmap" className="rounded-lg border border-[#0d1b2a] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-50">
               Explore the Roadmap →
             </Link>
-            <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-[#d4a63a] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-[#fffaf0]">
+            <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-lg border border-[#f2c14e] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-[#fffdf5]">
               Community Vision Page ↗
             </Link>
-            <Link href="/contact" className="rounded-lg border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-50">
+            <Link href="/contact" className="rounded-lg border border-[#0d1b2a] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-50">
               Contact Project Team →
             </Link>
           </div>
         </div>
 
         <figure className="space-y-3">
-          <div className="overflow-hidden rounded-2xl border border-slate-200">
-            <Image src="/images/5501-3story-rendering.jpg" alt="Conceptual rendering for 5501 Forward" width={1600} height={1067} className="h-full w-full object-cover" priority />
+          <div className="h-[360px] overflow-hidden rounded-2xl border border-slate-200 sm:h-[420px] lg:h-[560px]">
+            <Image
+              src="/images/5501-3story-rendering.jpg"
+              alt="Conceptual rendering for 5501 E. 33rd Avenue"
+              width={1600}
+              height={1067}
+              className="h-full w-full object-cover object-[center_60%]"
+              priority
+            />
           </div>
-          <figcaption className="border-l-2 border-[#d4a63a] pl-3 text-sm leading-6 text-slate-600">
+          <figcaption className="border-l-2 border-[#f2c14e] pl-3 text-sm leading-6 text-slate-600">
             Conceptual image for discussion purposes only. Final design, approvals, and scope remain subject to due diligence, entitlement review, and public process.
           </figcaption>
         </figure>
@@ -128,7 +143,7 @@ export default function HomePage() {
       <section className="space-y-5 rounded-2xl border border-slate-200 bg-[#fffdf8] p-6 sm:p-8">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Owner / Stakeholder Dashboard</h2>
-          <span className="rounded-full border border-[#d4a63a] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#0d1b2a]">Coming Soon</span>
+          <span className="rounded-full border border-[#f2c14e] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#0d1b2a]">Coming Soon</span>
         </div>
         <p className="text-base leading-7 text-slate-700">
           A future private planning dashboard can organize project decisions, consultant updates, documents, risks, and
