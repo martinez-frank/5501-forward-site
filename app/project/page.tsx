@@ -15,9 +15,9 @@ const snapshotCards = [
 export default function ProjectPage() {
   return (
     <div className="space-y-16 pb-8">
-      <section className="rounded-2xl border border-slate-200 bg-slate-50 px-6 py-7 sm:px-8 sm:py-8 lg:px-10">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.04fr)] lg:items-center">
-          <div className="space-y-5">
+      <section className="rounded-xl border border-slate-200 bg-slate-50/60 px-6 py-6 sm:px-8 sm:py-7 lg:px-10 lg:py-8">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.06fr)] lg:items-center">
+          <div className="space-y-4">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#f2c14e]">5501 Forward</p>
             <h1 className="text-4xl font-bold tracking-tight text-[#12263a] sm:text-5xl">Project Overview</h1>
             <h2 className="text-xl font-semibold text-[#1b3958]">A disciplined redevelopment study for a stronger neighborhood corner.</h2>
@@ -30,12 +30,12 @@ export default function ProjectPage() {
               <Link href="/contact" className="rounded-md bg-[#12263a] px-4 py-2 text-sm font-semibold text-white">Contact Project Team</Link>
             </div>
           </div>
-          <figure className="overflow-hidden rounded-xl border border-slate-200 bg-white">
-            <div className="relative aspect-[5/4] w-full">
-              <Image src="/images/5501-3story-rendering.jpg" alt="Three-story mixed-use conceptual rendering at 5501 E. 33rd Avenue" fill className="object-cover object-center" priority sizes="(min-width: 1024px) 50vw, 100vw" />
+          <figure className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+            <div className="relative aspect-[4/3] w-full md:aspect-[5/4]">
+              <Image src="/images/5501-3story-rendering.jpg" alt="Three-story mixed-use conceptual rendering at 5501 E. 33rd Avenue" fill className="object-cover object-[center_62%]" priority sizes="(min-width: 1280px) 48vw, (min-width: 1024px) 52vw, 100vw" />
             </div>
-            <figcaption className="border-t border-slate-200 px-4 py-3 text-xs text-slate-600">
-              <span className="mr-2 inline-block h-px w-6 align-middle bg-[#f2c14e]" />Three-story conceptual rendering — discussion image only
+            <figcaption className="border-t border-slate-200 px-4 py-2.5 text-xs text-slate-600">
+              <span className="mr-2 inline-block h-px w-7 align-middle bg-[#f2c14e]" />Three-story conceptual rendering — discussion image only
             </figcaption>
           </figure>
         </div>
@@ -45,7 +45,7 @@ export default function ProjectPage() {
         <h3 className="text-3xl font-bold text-[#12263a]">Project Snapshot</h3>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {snapshotCards.map(([label, value]) => (
-            <article key={label} className="rounded-xl border-t-2 border-[#f2c14e] bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <article key={label} className="rounded-lg border-t-2 border-[#f2c14e] bg-white p-5 shadow-sm ring-1 ring-slate-200">
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">{label}</p>
               <p className="mt-2 text-sm font-medium text-[#12263a]">{value}</p>
             </article>
@@ -115,7 +115,7 @@ export default function ProjectPage() {
             </figure>
           ))}
         </div>
-        <p className="rounded-xl border-l-4 border-[#f2c14e] bg-slate-50 p-4 text-sm text-slate-700">Conceptual image for discussion purposes only. Final design, height, density, unit count, retail layout, parking configuration, financing, approvals, and construction scope remain subject to due diligence, community input, entitlement review, public process, and project underwriting.</p>
+        <p className="rounded-lg border-l-4 border-[#f2c14e] bg-slate-50 p-4 text-sm text-slate-700">Conceptual image for discussion purposes only. Final design, height, density, unit count, retail layout, parking configuration, financing, approvals, and construction scope remain subject to due diligence, community input, entitlement review, public process, and project underwriting.</p>
       </section>
 
       <section className="rounded-3xl bg-[#12263a] p-6 text-white sm:p-10">
@@ -163,7 +163,7 @@ export default function ProjectPage() {
         <p className="text-slate-700">The project team is evaluating whether a future redevelopment could support public-facing benefits while remaining financially and technically feasible.</p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {['More active street edge', 'Neighborhood-serving retail or services', 'New housing opportunities', 'Improved frontage and pedestrian experience', 'Long-term reinvestment in the site', 'Potential public-private alignment'].map((item) => (
-            <article key={item} className="rounded-xl border-l-4 border-[#f2c14e] bg-white p-4 ring-1 ring-slate-200 text-sm text-[#12263a]">Potential benefit being evaluated: {item}</article>
+            <article key={item} className="rounded-lg border-l-4 border-[#f2c14e] bg-white p-4 ring-1 ring-slate-200 text-sm text-[#12263a]">Potential benefit being evaluated: {item}</article>
           ))}
         </div>
       </section>
