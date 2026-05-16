@@ -5,7 +5,7 @@ import Link from 'next/link'
 const statusCards = [
   ['Current Phase', 'Early planning + due diligence'],
   ['Community Outreach', 'Active listening phase'],
-  ['Consultant Input', 'Architect / GC / project advisory group assembled'],
+  ['Consultant Input', 'Architect / GC / project advisory input is being coordinated'],
   ['Entitlement Strategy', 'Being evaluated'],
   ['Capital Readiness', 'Pre-development positioning underway'],
   ['Design Status', 'Conceptual only — not approved'],
@@ -46,12 +46,30 @@ const stakeholderPreview = [
 ] as const
 
 const consultantGroup = [
-  'Terry Johnson — Owner / Developer',
-  'Frank Martinez — Project Consultant',
-  'Lucy Van Dusen, LCVD Architecture — Architect Partner',
-  'Mike Jameson — General Contractor A',
-  'Klaus Hirtler — General Contractor B',
-  'Raymond Nelson — General Contractor',
+  {
+    nameRole: 'Terry Johnson — Owner / Developer',
+    description: 'Property ownership and development sponsor.',
+  },
+  {
+    nameRole: 'Frank Martinez — Project Consultant',
+    description: 'Project coordination, capital strategy, consultant alignment, and stakeholder preparation.',
+  },
+  {
+    nameRole: 'Lucy Van Dusen, LCVD Architecture — Architect Partner',
+    description: 'Architectural planning, design feasibility, massing input, and entitlement-facing design guidance.',
+  },
+  {
+    nameRole: 'Mike Jameson — General Contractor A',
+    description: 'Commercial GC review, constructability input, and execution planning.',
+  },
+  {
+    nameRole: 'Klaus Hirtler — General Contractor B',
+    description: 'Commercial GC review, alternate constructability perspective, and cost/field input.',
+  },
+  {
+    nameRole: 'Raymond Nelson — General Contractor',
+    description: 'GC advisory, site execution input, and construction planning support.',
+  },
 ] as const
 
 export const metadata: Metadata = {
@@ -181,14 +199,16 @@ export default function HomePage() {
       </section>
 
       <section className="space-y-5">
-        <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Consultant Group Preview</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Project Advisory + Consultant Group</h2>
         <p className="text-base leading-7 text-slate-700">
-          Current consultant group supporting early-stage feasibility, design review, entitlement strategy, and
-          construction input.
+          Early-stage advisory and consultant group supporting feasibility review, design planning, entitlement strategy, construction input, and capital readiness.
         </p>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {consultantGroup.map((member) => (
-            <li key={member} className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-800">{member}</li>
+            <li key={member.nameRole} className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-800">
+              <p className="font-semibold text-[#0d1b2a]">{member.nameRole}</p>
+              <p className="mt-2 text-slate-700">{member.description}</p>
+            </li>
           ))}
         </ul>
       </section>
