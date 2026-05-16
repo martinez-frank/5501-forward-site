@@ -7,8 +7,8 @@ import { usePathname } from 'next/navigation'
 
 const navItems = [
   ['Project', '/project'],
-  ['Roadmap', '/execution-roadmap'],
-  ['Strategy', '/development-strategy'],
+  ['Roadmap', '/roadmap'],
+  ['Strategy', '/strategy'],
   ['Investor Brief', '/investor-brief'],
   ['Team', '/team'],
   ['Documents', '/documents'],
@@ -68,7 +68,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <Link
                 key={href}
                 href={href}
-                className="transition-colors duration-200 hover:text-[#0d1b2a]"
+                className={`transition-colors duration-200 hover:text-[#0d1b2a] ${pathname === href ? 'text-[#0d1b2a]' : ''}`}
               >
                 {label}
               </Link>
@@ -85,7 +85,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   <li key={href}>
                     <Link
                       href={href}
-                      className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition duration-200 hover:bg-slate-100 hover:text-slate-900"
+                      className={`block rounded-md px-3 py-2 text-sm font-medium transition duration-200 hover:bg-slate-100 hover:text-slate-900 ${pathname === href ? 'bg-slate-100 text-[#0d1b2a]' : 'text-slate-700'}`}
                     >
                       {label}
                     </Link>
