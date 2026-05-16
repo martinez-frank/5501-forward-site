@@ -21,10 +21,10 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   if (isCommunityPage) {
     return (
       <div className="min-h-screen bg-[#f7f5ef] text-slate-900">
-        <header className="border-b border-slate-200 bg-white">
-          <div className="mx-auto flex w-full max-w-4xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+        <header className="sticky top-0 z-50 border-b border-[rgba(11,34,63,0.12)] bg-[rgba(255,255,255,0.86)] backdrop-blur-[12px]">
+          <div className="mx-auto flex w-full max-w-4xl items-center justify-center px-4 py-3 sm:px-6">
             <Link href="/community" className="inline-flex items-center" aria-label="5501 Forward Community Vision Page">
-              <Image src="/images/5501forward.logo.png" alt="5501 Forward" width={180} height={61} className="h-auto w-[140px] sm:w-[170px]" priority />
+              <Image src="/images/5501forward.logo.png" alt="5501 Forward" width={225} height={76} className="h-auto w-[175px] sm:w-[213px]" priority />
             </Link>
           </div>
         </header>
@@ -47,17 +47,17 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <Image
               src="/images/5501forward.logo.png"
               alt="5501 Forward — Listening First. Planning Responsibly."
-              width={220}
-              height={74}
-              className="hidden h-auto w-[170px] sm:block"
+              width={275}
+              height={93}
+              className="hidden h-auto w-[213px] sm:block"
               priority
             />
             <Image
               src="/images/5501forward.logo.png"
               alt="5501 Forward"
-              width={220}
-              height={74}
-              className="h-auto w-[180px] max-w-full sm:hidden"
+              width={275}
+              height={93}
+              className="h-auto w-[225px] max-w-full sm:hidden"
               priority
             />
           </Link>
