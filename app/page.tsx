@@ -70,14 +70,14 @@ export default function HomePage() {
             alt="5501 Forward logo"
             width={520}
             height={120}
-            className="h-auto w-[220px] sm:w-[280px] lg:w-[320px]"
+            className="h-auto w-[250px] sm:w-[320px] lg:w-[390px]"
             priority
           />
           <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-[#f2c14e]">DENVER REDEVELOPMENT INITIATIVE</p>
-          <p className="mt-5 max-w-[62ch] text-lg text-[#1f2f43]">
+          <p className="mt-5 max-w-[62ch] text-base leading-[1.6] font-normal text-[#1f2f43] sm:text-[17px] lg:text-[19px]">
             A community-informed redevelopment platform for 5501 E. 33rd Avenue in Denver, linking public priorities, consultant diligence, and responsible capital planning.
           </p>
-          <p className="mt-5 max-w-[62ch] text-base leading-7 text-slate-700">
+          <p className="mt-5 max-w-[62ch] text-base leading-[1.6] font-normal text-[#1f2f43] sm:text-[17px] lg:text-[19px]">
             Early-stage planning is underway for a potential mixed-use future, including environmental and entitlement review, multidisciplinary consultant coordination, and disciplined pre-development capital strategy.
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
