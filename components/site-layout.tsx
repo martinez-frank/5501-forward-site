@@ -14,6 +14,9 @@ const navItems = [
   ['Contact', '/contact'],
 ] as const
 
+const mobileHeaderClass =
+  'sticky top-0 z-50 border-b border-[rgba(10,31,51,0.08)] bg-[rgba(255,255,255,0.82)] backdrop-blur-[12px] supports-[-webkit-backdrop-filter:blur(12px)]:[-webkit-backdrop-filter:blur(12px)]'
+
 export function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   const isCommunityPage = pathname === '/community'
@@ -21,10 +24,22 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   if (isCommunityPage) {
     return (
       <div className="min-h-screen bg-[#f7f5ef] text-slate-900">
-        <header className="sticky top-0 z-50 border-b border-[rgba(11,34,63,0.12)] bg-[rgba(255,255,255,0.86)] backdrop-blur-[12px]">
-          <div className="mx-auto flex w-full max-w-4xl items-center justify-center px-4 py-3 sm:px-6">
-            <Link href="/community" className="inline-flex items-center" aria-label="5501 Forward Community Vision Page">
-              <Image src="/images/5501forward.logo.png" alt="5501 Forward" width={225} height={76} className="h-auto w-[175px] sm:w-[213px]" priority />
+        <header className={mobileHeaderClass}>
+          <div className="relative mx-auto flex w-full max-w-4xl items-center px-4 py-3 sm:px-6">
+            <div className="h-9 w-[74px] sm:hidden" aria-hidden />
+            <Link
+              href="/community"
+              className="absolute left-1/2 inline-flex -translate-x-1/2 items-center"
+              aria-label="5501 Forward Community Vision Page"
+            >
+              <Image
+                src="/images/5501forward.logo.png"
+                alt="5501 Forward"
+                width={275}
+                height={93}
+                className="h-auto w-[clamp(220px,58vw,260px)] max-w-[calc(100vw-2rem)] object-contain sm:w-[213px]"
+                priority
+              />
             </Link>
           </div>
         </header>
@@ -41,15 +56,19 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="sticky top-0 z-50 border-b border-[rgba(15,34,58,0.08)] bg-[rgba(255,255,255,0.82)] backdrop-blur-[14px]">
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-3 sm:flex sm:justify-between sm:gap-4 sm:px-6">
-          <Link href="/" className="col-start-2 inline-flex items-center justify-self-center sm:col-start-auto sm:justify-self-auto" aria-label="5501 Forward Home">
+      <header className={mobileHeaderClass}>
+        <div className="relative mx-auto grid w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-3 sm:flex sm:justify-between sm:gap-4 sm:px-6">
+          <Link
+            href="/"
+            className="absolute left-1/2 col-start-2 inline-flex -translate-x-1/2 items-center justify-self-center sm:static sm:col-start-auto sm:translate-x-0 sm:justify-self-auto"
+            aria-label="5501 Forward Home"
+          >
             <Image
               src="/images/5501forward.logo.png"
               alt="5501 Forward — Listening First. Planning Responsibly."
               width={275}
               height={93}
-              className="hidden h-auto w-[213px] sm:block"
+              className="hidden h-auto w-[213px] object-contain sm:block"
               priority
             />
             <Image
@@ -57,7 +76,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               alt="5501 Forward"
               width={275}
               height={93}
-              className="h-auto w-[225px] max-w-full sm:hidden"
+              className="h-auto w-[clamp(220px,58vw,260px)] max-w-[calc(100vw-7rem)] object-contain sm:hidden"
               priority
             />
           </Link>
