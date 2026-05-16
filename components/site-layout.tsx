@@ -42,9 +42,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-          <Link href="/" className="inline-flex items-center" aria-label="5501 Forward Home">
+      <header className="sticky top-0 z-50 border-b border-[rgba(15,34,58,0.08)] bg-[rgba(255,255,255,0.82)] backdrop-blur-[14px]">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-3 sm:flex sm:justify-between sm:gap-4 sm:px-6">
+          <Link href="/" className="col-start-2 inline-flex items-center justify-self-center sm:col-start-auto sm:justify-self-auto" aria-label="5501 Forward Home">
             <Image
               src="/images/5501forward.logo.png"
               alt="5501 Forward — Listening First. Planning Responsibly."
@@ -53,7 +53,14 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               className="hidden h-auto w-[170px] sm:block"
               priority
             />
-            <span className="text-base font-semibold tracking-tight sm:hidden">5501 Forward</span>
+            <Image
+              src="/images/5501forward.logo.png"
+              alt="5501 Forward"
+              width={220}
+              height={74}
+              className="h-auto w-[180px] max-w-full sm:hidden"
+              priority
+            />
           </Link>
 
           <nav className="hidden flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-600 lg:flex">
@@ -61,14 +68,14 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <Link
                 key={href}
                 href={href}
-                className="transition-colors duration-200 hover:text-[#8E6F3E]"
+                className="transition-colors duration-200 hover:text-[#0d1b2a]"
               >
                 {label}
               </Link>
             ))}
           </nav>
 
-          <details className="group relative lg:hidden">
+          <details className="group relative col-start-3 justify-self-end lg:hidden">
             <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-50">
               Menu
             </summary>
