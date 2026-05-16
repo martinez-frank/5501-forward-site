@@ -183,17 +183,17 @@ export default function ProjectPage() {
       </section>
 
       <section className="space-y-4 rounded-2xl bg-white p-6 ring-1 ring-slate-200">
-        <h3 className="text-3xl font-bold text-[#12263a]">Project Advisory + Consultant Group</h3>
-        <p className="text-slate-700">Multidisciplinary advisory and consultant group is being assembled to support due diligence, design feasibility, entitlement strategy, and construction planning.</p>
+        <h3 className="text-3xl font-bold text-[#12263a]">Project Advisory Group</h3>
+        <p className="text-slate-700">A multidisciplinary advisory group is being assembled to support due diligence, design feasibility, entitlement strategy, construction planning, and capital-readiness.</p>
         <ul className="grid gap-3 text-sm sm:grid-cols-2 lg:grid-cols-3">
           <li className="rounded-lg border border-slate-200 bg-white p-4 text-slate-800"><p className="font-semibold text-[#12263a]">Terry Johnson — Owner / Developer</p><p className="mt-2 text-slate-700">Property ownership and development sponsor.</p></li>
-          <li className="rounded-lg border border-slate-200 bg-white p-4 text-slate-800"><p className="font-semibold text-[#12263a]">Frank Martinez — Project Consultant</p><p className="mt-2 text-slate-700">Project coordination, capital strategy, consultant alignment, and stakeholder preparation.</p></li>
+          <li className="rounded-lg border border-slate-200 bg-white p-4 text-slate-800"><p className="font-semibold text-[#12263a]">Frank Martinez — Project Consultant, Capital Strategy & Stakeholder Coordination</p><p className="mt-2 text-slate-700">Project coordination, capital-readiness strategy, consultant alignment, stakeholder preparation, and owner advisory support.</p></li>
           <li className="rounded-lg border border-slate-200 bg-white p-4 text-slate-800"><p className="font-semibold text-[#12263a]">Lucy Van Dusen, LCVD Architecture — Architect Partner</p><p className="mt-2 text-slate-700">Architectural planning, design feasibility, massing input, and entitlement-facing design guidance.</p></li>
           <li className="rounded-lg border border-slate-200 bg-white p-4 text-slate-800"><p className="font-semibold text-[#12263a]">Mike Jameson — General Contractor A</p><p className="mt-2 text-slate-700">Commercial GC review, constructability input, and execution planning.</p></li>
           <li className="rounded-lg border border-slate-200 bg-white p-4 text-slate-800"><p className="font-semibold text-[#12263a]">Klaus Hirtler — General Contractor B</p><p className="mt-2 text-slate-700">Commercial GC review, alternate constructability perspective, and cost/field input.</p></li>
           <li className="rounded-lg border border-slate-200 bg-white p-4 text-slate-800"><p className="font-semibold text-[#12263a]">Raymond Nelson — General Contractor</p><p className="mt-2 text-slate-700">GC advisory, site execution input, and construction planning support.</p></li>
         </ul>
-        <Link href="/team" className="inline-flex rounded-md bg-[#12263a] px-4 py-2 text-sm font-semibold text-white">Meet the Project Team</Link>
+        <Link href="/contact" className="inline-flex rounded-md bg-[#12263a] px-4 py-2 text-sm font-semibold text-white">Contact Project Team</Link>
       </section>
 
       <section className="rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm leading-relaxed text-slate-700">

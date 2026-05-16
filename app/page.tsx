@@ -51,8 +51,8 @@ const consultantGroup = [
     description: 'Property ownership and development sponsor.',
   },
   {
-    nameRole: 'Frank Martinez — Project Consultant',
-    description: 'Project coordination, capital strategy, consultant alignment, and stakeholder preparation.',
+    nameRole: 'Frank Martinez — Project Consultant, Capital Strategy & Stakeholder Coordination',
+    description: 'Project coordination, capital-readiness strategy, consultant alignment, stakeholder preparation, and owner advisory support.',
   },
   {
     nameRole: 'Lucy Van Dusen, LCVD Architecture — Architect Partner',
@@ -184,7 +184,7 @@ export default function HomePage() {
             <div className="mt-3 flex flex-col gap-2 text-sm font-semibold text-[#0d1b2a]">
               <Link href="/project" className="hover:underline">Project Overview</Link>
               <Link href="/execution-roadmap" className="hover:underline">Execution Roadmap</Link>
-              <Link href="/team" className="hover:underline">Team</Link>
+              <Link href="/contact" className="hover:underline">Contact Project Team</Link>
             </div>
           </article>
           <article className="rounded-xl border border-slate-200 bg-white p-5">
@@ -199,9 +199,9 @@ export default function HomePage() {
       </section>
 
       <section className="space-y-5">
-        <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Project Advisory + Consultant Group</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Project Advisory Group</h2>
         <p className="text-base leading-7 text-slate-700">
-          Early-stage advisory and consultant group supporting feasibility review, design planning, entitlement strategy, construction input, and capital readiness.
+          A multidisciplinary advisory group is being assembled to support due diligence, design feasibility, entitlement strategy, construction planning, and capital-readiness.
         </p>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {consultantGroup.map((member) => (
