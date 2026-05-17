@@ -20,6 +20,59 @@ body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+.roadmap-page {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .roadmap-page {
+    overflow-x: clip;
+  }
+
+  .roadmap-page .roadmap-content,
+  .roadmap-page .roadmap-timeline,
+  .roadmap-page .roadmap-phase-card,
+  .roadmap-page .phase-detail-card,
+  .roadmap-page .phase-purpose {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .roadmap-page .phase-detail-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .roadmap-page .roadmap-phase-card,
+  .roadmap-page .roadmap-phase-card *,
+  .roadmap-page .phase-detail-card,
+  .roadmap-page .phase-purpose {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  .roadmap-page .roadmap-phase-index {
+    max-width: 100%;
+    overflow: visible;
+  }
+}
+
+@supports not (overflow: clip) {
+  @media (max-width: 900px) {
+    .roadmap-page {
+      overflow-x: hidden;
+    }
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .animate-in-view {
     animation: fade-slide-up 600ms ease-out both;
