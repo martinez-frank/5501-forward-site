@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #111827;
-  --site-header-height: 88px;
+  --site-header-height: 80px;
 }
 
 * {
@@ -23,13 +23,20 @@ body {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.84);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(10, 31, 51, 0.08);
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(10, 31, 51, 0.08) !important;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
 .desktop-header-inner {
