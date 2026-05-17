@@ -23,20 +23,13 @@ body {
 }
 
 .site-header {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1000 !important;
-  background: rgba(255, 255, 255, 0.82) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border-bottom: 1px solid rgba(10, 31, 51, 0.08) !important;
-}
-
-.site-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(10, 31, 51, 0.08);
 }
 
 .desktop-header-inner {
@@ -121,7 +114,7 @@ body {
 
 .roadmap-phase-index {
   position: sticky;
-  top: 112px;
+  top: calc(var(--site-header-height, 80px) + 24px);
   align-self: start;
   display: flex;
   flex-direction: column;
