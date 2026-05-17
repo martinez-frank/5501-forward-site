@@ -22,7 +22,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   if (isCommunityPage) {
     return (
       <div className="min-h-screen bg-[#f7f5ef] text-slate-900">
-        <header className="site-header">
+        <header className="site-header sticky top-0 z-[1000] border-b border-[#0a1f33]/10 bg-white/75 backdrop-blur-xl supports-[backdrop-filter]:bg-white/65 shadow-[0_8px_24px_rgba(10,31,51,0.06)]">
           <div className="mx-auto grid w-full max-w-4xl grid-cols-[76px_minmax(0,1fr)_76px] items-center gap-2 px-4 py-3 sm:grid-cols-[68px_minmax(0,1fr)_68px] sm:px-6 min-[390px]:grid-cols-[76px_minmax(0,1fr)_76px]">
             <div className="h-px w-[76px] justify-self-start" aria-hidden />
             <Link
@@ -55,7 +55,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="site-header">
+      <header className="site-header sticky top-0 z-[1000] border-b border-[#0a1f33]/10 bg-white/75 backdrop-blur-xl supports-[backdrop-filter]:bg-white/65 shadow-[0_8px_24px_rgba(10,31,51,0.06)]">
         <div className="desktop-header-inner hidden lg:flex">
           <Link href="/" className="desktop-logo-link" aria-label="5501 Forward Home">
             <Image
