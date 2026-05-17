@@ -14,7 +14,6 @@ const navItems = [
   ['Contact', '/contact'],
 ] as const
 
-
 export function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   const isCommunityPage = pathname === '/community'
@@ -22,24 +21,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   if (isCommunityPage) {
     return (
       <div className="min-h-screen bg-[#f7f5ef] text-slate-900">
-        <header className="site-header sticky top-0 z-[1000] border-b border-[#0a1f33]/10 bg-white/75 backdrop-blur-xl supports-[backdrop-filter]:bg-white/65 shadow-[0_8px_24px_rgba(10,31,51,0.06)]">
-          <div className="mx-auto grid w-full max-w-4xl grid-cols-[76px_minmax(0,1fr)_76px] items-center gap-2 px-4 py-3 sm:grid-cols-[68px_minmax(0,1fr)_68px] sm:px-6 min-[390px]:grid-cols-[76px_minmax(0,1fr)_76px]">
-            <div className="h-px w-[76px] justify-self-start" aria-hidden />
-            <Link
-              href="/community"
-              className="col-start-2 inline-flex min-w-0 items-center justify-center"
-              aria-label="5501 Forward Community Vision Page"
-            >
-              <Image
-                src="/images/5501forward.logo.png"
-                alt="5501 Forward"
-                width={275}
-                height={93}
-                className="block h-auto w-[clamp(170px,48vw,220px)] max-w-full object-contain min-[390px]:w-[clamp(185px,50vw,245px)]"
-                priority
-              />
+        <header className="sticky top-0 z-50 border-b border-[rgba(15,34,58,0.08)] bg-[rgba(255,255,255,0.82)] backdrop-blur-[14px]">
+          <div className="mx-auto flex w-full max-w-4xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+            <Link href="/community" className="inline-flex items-center" aria-label="5501 Forward Community Vision Page">
+              <Image src="/images/5501forward.logo.png" alt="5501 Forward" width={180} height={61} className="h-auto w-[140px] sm:w-[170px]" priority />
             </Link>
-            <div className="h-px w-[76px] justify-self-end" aria-hidden />
           </div>
         </header>
         <main className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-10">{children}</main>
@@ -55,20 +41,28 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className="site-header sticky top-0 z-[1000] border-b border-[#0a1f33]/10 bg-white/75 backdrop-blur-xl supports-[backdrop-filter]:bg-white/65 shadow-[0_8px_24px_rgba(10,31,51,0.06)]">
-        <div className="desktop-header-inner hidden lg:flex">
-          <Link href="/" className="desktop-logo-link" aria-label="5501 Forward Home">
+      <header className="sticky top-0 z-50 border-b border-[rgba(15,34,58,0.08)] bg-[rgba(255,255,255,0.82)] backdrop-blur-[14px]">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 py-3 sm:flex sm:justify-between sm:gap-4 sm:px-6">
+          <Link href="/" className="col-start-2 inline-flex items-center justify-self-center sm:col-start-auto sm:justify-self-auto" aria-label="5501 Forward Home">
             <Image
               src="/images/5501forward.logo.png"
               alt="5501 Forward — Listening First. Planning Responsibly."
-              width={275}
-              height={93}
-              className="desktop-header-logo"
+              width={220}
+              height={74}
+              className="hidden h-auto w-[170px] sm:block"
+              priority
+            />
+            <Image
+              src="/images/5501forward.logo.png"
+              alt="5501 Forward"
+              width={220}
+              height={74}
+              className="h-auto w-[180px] max-w-full sm:hidden"
               priority
             />
           </Link>
 
-          <nav className="desktop-nav text-sm font-medium text-slate-600">
+          <nav className="hidden flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-600 lg:flex">
             {navItems.map(([label, href]) => (
               <Link
                 key={href}
@@ -79,23 +73,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               </Link>
             ))}
           </nav>
-        </div>
 
-        <div className="mobile-header-inner grid lg:hidden">
-          <div className="mobile-header-spacer" aria-hidden="true" />
-
-          <Link href="/" className="mobile-header-logo-link" aria-label="5501 Forward Home">
-            <Image
-              src="/images/5501forward.logo.png"
-              alt="5501 Forward"
-              width={275}
-              height={93}
-              className="mobile-header-logo"
-              priority
-            />
-          </Link>
-
-          <details className="mobile-menu-button group relative">
+          <details className="group relative col-start-3 justify-self-end lg:hidden">
             <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-50">
               Menu
             </summary>
