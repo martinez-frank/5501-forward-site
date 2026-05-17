@@ -21,10 +21,17 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   if (isCommunityPage) {
     return (
       <div className="min-h-screen bg-[#f7f5ef] text-slate-900">
-        <header className="sticky top-0 z-50 border-b border-[rgba(15,34,58,0.08)] bg-[rgba(255,255,255,0.82)] backdrop-blur-[14px]">
-          <div className="mx-auto flex w-full max-w-4xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-            <Link href="/community" className="inline-flex items-center" aria-label="5501 Forward Community Vision Page">
-              <Image src="/images/5501forward.logo.png" alt="5501 Forward" width={180} height={61} className="h-auto w-[140px] sm:w-[170px]" priority />
+        <header className="community-header sticky top-0 z-[1000] border-b border-[rgba(10,31,51,0.08)] bg-[rgba(255,255,255,0.78)] backdrop-blur-[14px]">
+          <div className="community-header-inner mx-auto flex min-h-[92px] w-full max-w-[1200px] items-center justify-center px-4 py-[0.9rem] box-border sm:min-h-[96px] sm:px-6 sm:py-4">
+            <Link href="/community" className="inline-flex items-center justify-center" aria-label="5501 Forward Community Vision Page">
+              <Image
+                src="/images/5501forward.logo.png"
+                alt="5501 Forward"
+                width={360}
+                height={121}
+                className="community-header-logo block h-auto w-[clamp(230px,68vw,320px)] max-w-full object-contain sm:w-[clamp(260px,28vw,360px)]"
+                priority
+              />
             </Link>
           </div>
         </header>
