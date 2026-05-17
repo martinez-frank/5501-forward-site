@@ -27,6 +27,8 @@ body {
 
 @media (max-width: 900px) {
   .roadmap-page {
+    width: 100%;
+    max-width: 100%;
     overflow-x: clip;
   }
 
@@ -60,8 +62,23 @@ body {
   }
 
   .roadmap-page .roadmap-phase-index {
+    position: static;
+    width: 100%;
     max-width: 100%;
+    min-width: 0;
     overflow: visible;
+  }
+
+  .roadmap-page .phase-pill {
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 640px) {
+  .roadmap-page .roadmap-phase-index {
+    display: none;
   }
 }
 
