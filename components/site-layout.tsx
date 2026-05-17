@@ -14,11 +14,11 @@ const navItems = [
   ['Contact', '/contact'],
 ] as const
 
-const mobileHeaderClass =
-  'sticky top-0 z-50 border-b border-[rgba(10,31,51,0.08)] bg-[rgba(255,255,255,0.84)] backdrop-blur-[12px] supports-[-webkit-backdrop-filter:blur(12px)]:[-webkit-backdrop-filter:blur(12px)]'
+const headerClass =
+  'sticky top-0 z-[100] border-b border-[rgba(10,31,51,0.08)] bg-[rgba(255,255,255,0.84)] backdrop-blur-[12px] supports-[-webkit-backdrop-filter:blur(12px)]:[-webkit-backdrop-filter:blur(12px)]'
 
 const mobileHeaderInnerClass =
-  'mx-auto grid w-full max-w-7xl grid-cols-[76px_minmax(0,1fr)_76px] items-center gap-2 px-4 py-3 sm:grid-cols-[68px_minmax(0,1fr)_68px] min-[390px]:grid-cols-[76px_minmax(0,1fr)_76px] lg:flex lg:justify-between lg:gap-4 lg:px-6'
+  'mx-auto grid w-full max-w-7xl grid-cols-[76px_minmax(0,1fr)_76px] items-center gap-2 px-4 py-3 min-[390px]:grid-cols-[76px_minmax(0,1fr)_76px] max-[389px]:grid-cols-[68px_minmax(0,1fr)_68px] lg:flex lg:justify-between lg:gap-4 lg:px-6'
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname()
@@ -27,7 +27,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   if (isCommunityPage) {
     return (
       <div className="min-h-screen bg-[#f7f5ef] text-slate-900">
-        <header className={mobileHeaderClass}>
+        <header className={headerClass}>
           <div className="mx-auto grid w-full max-w-4xl grid-cols-[76px_minmax(0,1fr)_76px] items-center gap-2 px-4 py-3 sm:grid-cols-[68px_minmax(0,1fr)_68px] sm:px-6 min-[390px]:grid-cols-[76px_minmax(0,1fr)_76px]">
             <div className="h-px w-[76px] justify-self-start" aria-hidden />
             <Link
@@ -40,7 +40,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 alt="5501 Forward"
                 width={275}
                 height={93}
-                className="block h-auto w-[clamp(175px,48vw,220px)] max-w-full object-contain min-[390px]:w-[clamp(190px,52vw,245px)] sm:w-[213px]"
+                className="block h-auto w-[clamp(170px,48vw,220px)] max-w-full object-contain min-[390px]:w-[clamp(185px,50vw,245px)]"
                 priority
               />
             </Link>
@@ -60,9 +60,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className={mobileHeaderClass}>
+      <header className={headerClass}>
         <div className={mobileHeaderInnerClass}>
-          <div className="h-px w-[76px] justify-self-start lg:hidden" aria-hidden />
+          <div className="h-px w-[76px] max-[389px]:w-[68px] justify-self-start lg:hidden" aria-hidden />
 
           <Link
             href="/"
@@ -82,7 +82,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               alt="5501 Forward"
               width={275}
               height={93}
-              className="block h-auto w-[clamp(175px,48vw,220px)] max-w-full object-contain min-[390px]:w-[clamp(190px,52vw,245px)] lg:hidden"
+              className="block h-auto w-[clamp(170px,48vw,220px)] max-w-full object-contain min-[390px]:w-[clamp(185px,50vw,245px)] lg:hidden"
               priority
             />
           </Link>
@@ -99,7 +99,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             ))}
           </nav>
 
-          <details className="group relative col-start-3 justify-self-end lg:hidden">
+          <details className="group relative col-start-3 justify-self-end whitespace-nowrap lg:hidden">
             <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-50">
               Menu
             </summary>
