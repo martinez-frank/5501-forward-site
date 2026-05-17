@@ -15,10 +15,10 @@ const navItems = [
 ] as const
 
 const headerClass =
-  'sticky top-0 z-[100] border-b border-[rgba(10,31,51,0.08)] bg-[rgba(255,255,255,0.84)] backdrop-blur-[12px] supports-[-webkit-backdrop-filter:blur(12px)]:[-webkit-backdrop-filter:blur(12px)]'
+  'sticky top-0 z-[1000] border-b border-[rgba(10,31,51,0.08)] bg-[rgba(255,255,255,0.84)] backdrop-blur-[12px] supports-[-webkit-backdrop-filter:blur(12px)]:[-webkit-backdrop-filter:blur(12px)]'
 
 const mobileHeaderInnerClass =
-  'mx-auto grid w-full max-w-7xl grid-cols-[76px_minmax(0,1fr)_76px] items-center gap-2 px-4 py-3 min-[390px]:grid-cols-[76px_minmax(0,1fr)_76px] max-[389px]:grid-cols-[68px_minmax(0,1fr)_68px] lg:flex lg:justify-between lg:gap-4 lg:px-6'
+  'mobile-header-inner mx-auto w-full max-w-7xl lg:flex lg:justify-between lg:gap-4 lg:px-6'
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname()
@@ -62,11 +62,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-white text-slate-900">
       <header className={headerClass}>
         <div className={mobileHeaderInnerClass}>
-          <div className="h-px w-[76px] max-[389px]:w-[68px] justify-self-start lg:hidden" aria-hidden />
+          <div className="mobile-header-spacer h-px justify-self-start lg:hidden" aria-hidden />
 
           <Link
             href="/"
-            className="col-start-2 inline-flex min-w-0 items-center justify-center lg:col-start-auto lg:justify-self-auto"
+            className="mobile-header-logo-link col-start-2 inline-flex lg:col-start-auto lg:justify-self-auto"
             aria-label="5501 Forward Home"
           >
             <Image
@@ -82,7 +82,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               alt="5501 Forward"
               width={275}
               height={93}
-              className="block h-auto w-[clamp(170px,48vw,220px)] max-w-full object-contain min-[390px]:w-[clamp(185px,50vw,245px)] lg:hidden"
+              className="mobile-header-logo lg:hidden"
               priority
             />
           </Link>
@@ -99,7 +99,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             ))}
           </nav>
 
-          <details className="group relative col-start-3 justify-self-end whitespace-nowrap lg:hidden">
+          <details className="mobile-menu-button group relative col-start-3 lg:hidden">
             <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-50">
               Menu
             </summary>
