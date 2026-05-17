@@ -22,27 +22,71 @@ body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-.mobile-header-inner {
-  display: grid;
-  grid-template-columns: 76px minmax(0, 1fr) 76px;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(10, 31, 51, 0.08);
+}
+
+.desktop-header-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
   align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.desktop-logo-link {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.desktop-header-logo {
+  width: 220px;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  flex: 0 0 auto;
+}
+
+.mobile-header-inner {
   width: 100%;
   max-width: 100%;
   min-height: 82px;
+  grid-template-columns: 76px minmax(0, 1fr) 76px;
+  align-items: center;
   padding: 0.75rem 1rem;
   box-sizing: border-box;
-  gap: 0.5rem;
+}
+
+.mobile-header-spacer {
+  width: 76px;
 }
 
 .mobile-header-logo-link {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-width: 0;
 }
 
 .mobile-header-logo {
-  width: clamp(180px, 50vw, 240px);
+  width: clamp(175px, 48vw, 230px);
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -55,22 +99,45 @@ body {
   white-space: nowrap;
 }
 
-.mobile-header-spacer {
-  width: 76px;
+.roadmap-dashboard-section {
+  position: relative;
+  overflow: visible;
 }
 
-@media (max-width: 390px) {
-  .mobile-header-inner {
-    grid-template-columns: 68px minmax(0, 1fr) 68px;
-  }
+.roadmap-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  overflow: visible;
+}
 
-  .mobile-header-logo {
-    width: clamp(165px, 48vw, 215px);
-  }
+.roadmap-phase-index {
+  position: sticky;
+  top: 112px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 260px;
+  z-index: 20;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
 
-  .mobile-header-spacer {
-    width: 68px;
-  }
+.roadmap-content {
+  min-width: 0;
+}
+
+.phase-pill {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
@@ -82,6 +149,8 @@ body {
     position: static;
     max-width: 100%;
     width: 100%;
+    max-height: none;
+    overflow: visible;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -91,6 +160,16 @@ body {
 
   .phase-pill {
     width: auto;
+  }
+}
+
+@media (max-width: 390px) {
+  .mobile-header-inner {
+    grid-template-columns: 68px minmax(0, 1fr) 68px;
+  }
+
+  .mobile-header-logo {
+    width: clamp(160px, 46vw, 210px);
   }
 }
 
@@ -114,6 +193,7 @@ body {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

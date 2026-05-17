@@ -14,11 +14,6 @@ const navItems = [
   ['Contact', '/contact'],
 ] as const
 
-const headerClass =
-  'sticky top-0 z-[1000] border-b border-[rgba(10,31,51,0.08)] bg-[rgba(255,255,255,0.84)] backdrop-blur-[12px] supports-[-webkit-backdrop-filter:blur(12px)]:[-webkit-backdrop-filter:blur(12px)]'
-
-const mobileHeaderInnerClass =
-  'mobile-header-inner mx-auto w-full max-w-7xl lg:flex lg:justify-between lg:gap-4 lg:px-6'
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname()
@@ -27,7 +22,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   if (isCommunityPage) {
     return (
       <div className="min-h-screen bg-[#f7f5ef] text-slate-900">
-        <header className={headerClass}>
+        <header className="site-header">
           <div className="mx-auto grid w-full max-w-4xl grid-cols-[76px_minmax(0,1fr)_76px] items-center gap-2 px-4 py-3 sm:grid-cols-[68px_minmax(0,1fr)_68px] sm:px-6 min-[390px]:grid-cols-[76px_minmax(0,1fr)_76px]">
             <div className="h-px w-[76px] justify-self-start" aria-hidden />
             <Link
@@ -60,34 +55,20 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <header className={headerClass}>
-        <div className={mobileHeaderInnerClass}>
-          <div className="mobile-header-spacer h-px justify-self-start lg:hidden" aria-hidden />
-
-          <Link
-            href="/"
-            className="mobile-header-logo-link col-start-2 inline-flex lg:col-start-auto lg:justify-self-auto"
-            aria-label="5501 Forward Home"
-          >
+      <header className="site-header">
+        <div className="desktop-header-inner hidden lg:flex">
+          <Link href="/" className="desktop-logo-link" aria-label="5501 Forward Home">
             <Image
               src="/images/5501forward.logo.png"
               alt="5501 Forward — Listening First. Planning Responsibly."
               width={275}
               height={93}
-              className="hidden h-auto w-[213px] object-contain lg:block"
-              priority
-            />
-            <Image
-              src="/images/5501forward.logo.png"
-              alt="5501 Forward"
-              width={275}
-              height={93}
-              className="mobile-header-logo lg:hidden"
+              className="desktop-header-logo"
               priority
             />
           </Link>
 
-          <nav className="hidden flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-600 lg:flex">
+          <nav className="desktop-nav text-sm font-medium text-slate-600">
             {navItems.map(([label, href]) => (
               <Link
                 key={href}
@@ -98,8 +79,23 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               </Link>
             ))}
           </nav>
+        </div>
 
-          <details className="mobile-menu-button group relative col-start-3 lg:hidden">
+        <div className="mobile-header-inner grid lg:hidden">
+          <div className="mobile-header-spacer" aria-hidden="true" />
+
+          <Link href="/" className="mobile-header-logo-link" aria-label="5501 Forward Home">
+            <Image
+              src="/images/5501forward.logo.png"
+              alt="5501 Forward"
+              width={275}
+              height={93}
+              className="mobile-header-logo"
+              priority
+            />
+          </Link>
+
+          <details className="mobile-menu-button group relative">
             <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-50">
               Menu
             </summary>
