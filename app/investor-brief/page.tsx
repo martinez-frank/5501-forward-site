@@ -39,7 +39,7 @@ export default function InvestorBriefPage() {
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href="#diligence-status" className="rounded-xl bg-[#0f223a] px-4 py-2.5 text-sm font-medium text-white">Review Diligence Status</Link>
-          <Link href="#capital-framework" className="rounded-xl border border-[#0f223a] px-4 py-2.5 text-sm font-medium text-[#0f223a]">View Capital Framework</Link>
+          <Link href="/development-economics" className="rounded-xl border border-[#0f223a] px-4 py-2.5 text-sm font-medium text-[#0f223a]">View Development Economics</Link>
           <Link href="/contact" className="rounded-xl border border-[#d7dee8] px-4 py-2.5 text-sm font-medium text-slate-700">Contact Project Team</Link>
           <Link href="/roadmap" className="rounded-xl border border-[#d7dee8] px-4 py-2.5 text-sm font-medium text-slate-700">View Roadmap</Link>
           <Link href="/strategy" className="rounded-xl border border-[#d7dee8] px-4 py-2.5 text-sm font-medium text-slate-700">View Strategy</Link>
