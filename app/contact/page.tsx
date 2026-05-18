@@ -71,9 +71,11 @@ export default function ContactPage() {
         </p>
         <Link
           href="/community"
-          className="inline-flex w-full items-center justify-center rounded-lg border border-[#0B223F] bg-white px-5 py-3 text-sm font-semibold text-[#0B223F] transition hover:bg-slate-50 sm:w-auto"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-full items-center justify-center rounded-lg border border-[#f2c14e] bg-white px-5 py-3 text-sm font-semibold text-[#0d1b2a] hover:bg-[#fffdf5] sm:w-auto"
         >
-          Visit Community Vision Page
+          Community Vision Page ↗
         </Link>
       </section>
 
