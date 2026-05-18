@@ -51,10 +51,6 @@ const consultantGroup = [
     description: 'Property ownership and development sponsor.',
   },
   {
-    nameRole: 'Frank Martinez — Project Consultant, Capital Strategy & Stakeholder Coordination',
-    description: 'Project coordination, capital-readiness strategy, consultant alignment, stakeholder preparation, and owner advisory support.',
-  },
-  {
     nameRole: 'Lucy Van Dusen, LCVD Architecture — Architect Partner',
     description: 'Architectural planning, design feasibility, massing input, and entitlement-facing design guidance.',
   },
@@ -203,9 +199,14 @@ export default function HomePage() {
         <p className="text-base leading-7 text-slate-700">
           A multidisciplinary advisory group is being assembled to support due diligence, design feasibility, entitlement strategy, construction planning, and capital-readiness.
         </p>
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {consultantGroup.map((member) => (
-            <li key={member.nameRole} className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-800">
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
+          {consultantGroup.map((member, index) => (
+            <li
+              key={member.nameRole}
+              className={`rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-800 ${
+                index >= consultantGroup.length - 2 ? 'lg:col-span-3' : 'lg:col-span-2'
+              } ${index === consultantGroup.length - 1 ? 'sm:col-span-2' : ''}`}
+            >
               <p className="font-semibold text-[#0d1b2a]">{member.nameRole}</p>
               <p className="mt-2 text-slate-700">{member.description}</p>
             </li>
