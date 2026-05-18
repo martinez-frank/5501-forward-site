@@ -21,8 +21,8 @@ export default function ProjectPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#f2c14e]">5501 Forward</p>
             <h1 className="text-4xl font-bold tracking-tight text-[#12263a] sm:text-5xl">Project Overview</h1>
             <h2 className="text-xl font-semibold text-[#1b3958]">A disciplined redevelopment study for a stronger neighborhood corner.</h2>
-            <p className="text-base leading-relaxed text-slate-700">5501 Forward is an early-stage redevelopment platform evaluating whether 5501 E. 33rd Avenue can support a responsible, financeable, and community-responsive mixed-use future.</p>
-            <p className="text-base leading-relaxed text-slate-700">This page summarizes what is known, what is being studied, and how the project team is building confidence before any final development commitment is made.</p>
+            <p className="text-base leading-relaxed text-slate-700">5501 Forward is advancing a disciplined predevelopment process for 5501 E. 33rd Avenue, focused on diligence, entitlement strategy, design feasibility, and capital readiness.</p>
+            <p className="text-base leading-relaxed text-slate-700">This page summarizes what is known today, what remains under review, and how the project team is converting early unknowns into clear decisions before any final development commitment is made.</p>
             <div className="flex flex-wrap gap-3">
               <Link href="/execution-roadmap" className="rounded-md bg-[#12263a] px-4 py-2 text-sm font-semibold text-white">Explore the Roadmap</Link>
               <Link href="/development-strategy" className="rounded-md border border-[#12263a] bg-white px-4 py-2 text-sm font-semibold text-[#12263a]">View Development Strategy</Link>
