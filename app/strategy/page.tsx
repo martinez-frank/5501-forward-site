@@ -216,9 +216,6 @@ export default function StrategyPage() {
         <p className="max-w-[85ch] text-base leading-7 text-slate-200">
           Advance the 3-story by-right path as the fastest executable baseline while preserving optionality for a higher-value entitlement path if market, community, city, consultant, and capital signals support it.
         </p>
-        <p className="rounded-xl border border-[#f2c14e]/70 bg-[#f2c14e]/10 p-4 text-base font-semibold leading-7 text-white">
-          The strategy is not to chase the tallest building. The strategy is to identify the most responsible path that balances feasibility, community benefit, entitlement risk, and long-term value.
-        </p>
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link href="/roadmap" className="rounded-lg bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-100">Review Roadmap →</Link>
           <Link href="/investor-brief" className="rounded-lg border border-white/40 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-white/10">View Investor Brief →</Link>
