@@ -55,14 +55,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="space-y-3 border-t border-slate-200 pt-6">
-        <div className="h-[3px] w-12 rounded-full bg-[#f2b632]" aria-hidden="true" />
-        <h2 className="text-2xl font-bold text-[#0B223F]">Public-Sector and Agency Coordination</h2>
-        <p className="max-w-5xl leading-7 text-slate-700">
-          The project team is organizing diligence materials, environmental follow-up, preliminary cost information, and public-benefit context for continued discussions with public-sector stakeholders.
-        </p>
-      </section>
-
       <section className="space-y-4 border-t border-slate-200 pt-6">
         <div className="h-[3px] w-12 rounded-full bg-[#f2b632]" aria-hidden="true" />
         <h2 className="text-2xl font-bold text-[#0B223F]">Share Community Input</h2>
