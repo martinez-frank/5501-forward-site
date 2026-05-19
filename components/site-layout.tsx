@@ -17,6 +17,7 @@ const navItems = [
 export function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   const isCommunityPage = pathname === '/community'
+  const isActivePath = (href: string) => pathname === href || pathname.startsWith(`${href}/`)
 
   if (isCommunityPage) {
     return (
@@ -56,7 +57,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               alt="5501 Forward — Listening First. Planning Responsibly."
               width={220}
               height={74}
-              className="hidden h-auto w-[170px] sm:block"
+              className="hidden h-auto w-[190px] sm:block"
               priority
             />
             <Image
@@ -64,7 +65,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               alt="5501 Forward"
               width={220}
               height={74}
-              className="h-auto w-[180px] max-w-full sm:hidden"
+              className="h-auto w-[195px] max-w-full sm:hidden"
               priority
             />
           </Link>
@@ -74,7 +75,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <Link
                 key={href}
                 href={href}
-                className={`transition-colors duration-200 hover:text-[#0d1b2a] ${pathname === href ? 'text-[#0d1b2a]' : ''}`}
+                className={`relative transition-colors duration-200 hover:text-[#0d1b2a] ${isActivePath(href) ? 'text-[#0d1b2a] font-semibold after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#f2c14e]' : ''}`}
               >
                 {label}
               </Link>
@@ -91,7 +92,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   <li key={href}>
                     <Link
                       href={href}
-                      className={`block rounded-md px-3 py-2 text-sm font-medium transition duration-200 hover:bg-slate-100 hover:text-slate-900 ${pathname === href ? 'bg-slate-100 text-[#0d1b2a]' : 'text-slate-700'}`}
+                      className={`block rounded-md px-3 py-2 text-sm font-medium transition duration-200 hover:bg-slate-100 hover:text-slate-900 ${isActivePath(href) ? 'bg-slate-100 text-[#0d1b2a]' : 'text-slate-700'}`}
                     >
                       {label}
                     </Link>
