@@ -67,7 +67,52 @@ export default function DevelopmentEconomicsPage() {
       <section className="space-y-4"><h2 className="text-2xl font-semibold text-[#0f223a]">Market Validation Dashboard</h2><p className="text-slate-700">The market validation work should test whether the project can support its cost, timing, and entitlement risk under conservative assumptions. Denver market conditions should be treated carefully: current multifamily conditions are softer, retail fundamentals are more resilient but mixed, and parking, site condition, and affordability requirements require early modeling.</p><div className="overflow-x-auto rounded-2xl border border-[#d7dee8] bg-white"><table className="min-w-[980px] w-full text-sm"><thead className="bg-[#f7faff]"><tr>{['Market Input','Current Read','Underwriting Impact','Validation Needed'].map((h)=><th key={h} className="p-3 text-left font-semibold text-[#0f223a]">{h}</th>)}</tr></thead><tbody>{[['Newer Rental Apartments','Denver multifamily occupancy and rent trends suggest a conservative lease-up environment.','Use cautious rent growth, realistic concessions, and stabilized occupancy assumptions.','Broker rent comp packet, unit mix, lease-up schedule, concession assumptions.'],['Condo / For-Sale Product','For-sale value may support economics better than rental, but buyer affordability, HOA costs, financing rates, and absorption must be tested.','Model condo / for-sale case separately from rental case.','Condo sales comps, $/SF range, absorption, buyer profile, HOA sensitivity.'],['Small Mixed-Use Infill','Most relevant comps are neighborhood-scale mixed-use projects, not downtown towers.','Use comparable height, lot size, retail footprint, parking, and entitlement path.','Recent small mixed-use projects in Northeast Denver, Park Hill, Five Points, Central Park edge, and similar infill areas.'],['Retail Rents / Vacancy','Retail should be underwritten conservatively, especially ground-floor retail.','Retail should be treated as corner activation and community benefit first, profit center second.','Retail broker opinion, tenant demand, lease-up downtime, TI allowance, NNN rent range.'],['Parking Ratios','Denver’s parking framework may reduce minimum requirements, but market, lender, buyer, and neighborhood expectations still matter.','Do not overbuild parking, but do not assume the market will accept no parking.','Civil test fit, mobility strategy, buyer/renter expectations, neighborhood parking impact.'],['Affordable / Mixed-Income','10+ unit scenarios likely need affordability/EHA review.','Model affordability compliance early because it affects revenue, unit mix, public benefit, and capital stack.','EHA analysis, set-aside options, fee alternatives, public-sector support potential.'],['Recent Land / Redevelopment Sales','Land value depends heavily on entitlement, environmental condition, buildable area, site condition, and financing environment.','Do not rely on listing prices alone.','Closed-sale comps, price per land SF, price per buildable SF, zoning, entitlement status, environmental condition, and existing-structure condition.'],['Existing Structure / Site Condition','Vacant aging structure may create security, nuisance, liability, and neighborhood-perception risk.','Site-stabilization or demo-readiness planning may improve risk control and public-benefit positioning.','Site security review, current condition photos, abatement/demolition bid ranges, utility shut-off requirements, asbestos/CDPHE review, and Denver demolition permit path.']].map((r)=><tr key={r[0]} className="border-t border-[#e6ebf2] align-top">{r.map((c,i)=><td key={i} className="p-3 text-slate-700">{c}</td>)}</tr>)}</tbody></table></div><div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">{[['Rental Underwriting','Use conservative effective rent assumptions until broker comps are complete. Model lease-up concessions and occupancy sensitivity.'],['Retail Underwriting','Keep retail modest and tenant-tested. Include downtime, TI, leasing costs, and vacancy reserve.'],['Parking Strategy','Evaluate right-sized parking based on market expectations, civil feasibility, mobility access, and neighborhood impact.'],['Affordability Strategy','Model market-rate compliance and mixed-income/public-support alternatives before selecting a preferred scenario.'],['Site-Stabilization Strategy','Evaluate security, clean-out, hazardous-materials review, utility cut-offs, demolition bid solicitation, and permit-readiness before committing to full demolition.']].map(([t,b])=><article key={t} className="rounded-2xl border border-[#d7dee8] bg-white p-4"><h3 className="font-semibold text-[#0f223a]">{t}</h3><p className="mt-1 text-sm text-slate-700">{b}</p></article>)}</div></section>
       <section id="capital-ask" className="space-y-4 scroll-mt-24"><h2 className="text-2xl font-semibold text-[#0f223a]">Preliminary Capital Ask</h2><p className="text-slate-700">The current capital objective is not to fund vertical construction. The current capital objective is to fund the next risk-reduction gate before larger capital is pursued.</p><div className="rounded-2xl border border-[#d7dee8] bg-[#f7faff] p-5"><p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#a67c00]">Recommended Initial Predevelopment Tranche</p><p className="mt-2 text-3xl font-semibold text-[#0f223a]">$250,000–$400,000</p></div><p className="text-slate-700">This range is intended to fund environmental follow-up, ALTA/title integration, entitlement strategy, architect test fits, civil/utility review, GC cost validation, market validation, public-sector coordination, site-stabilization and demolition-readiness planning, and investor data room preparation.</p></section>
 
-      <section id="sources-uses" className="space-y-4 scroll-mt-24"><h2 className="text-2xl font-semibold text-[#0f223a]">Sources &amp; Uses Summary</h2><p className="text-slate-700">The following summary is preliminary and should be refined after consultant proposals, environmental scope, ALTA review, entitlement counsel input, civil/utility findings, demolition-readiness review, market broker input, and GC estimating.</p></section>
+      <section id="sources-uses" className="space-y-4 scroll-mt-24">
+        <h2 className="text-2xl font-semibold text-[#0f223a]">Sources &amp; Uses Summary</h2>
+        <p className="text-slate-700">The following summary is preliminary and should be refined after consultant proposals, environmental scope, ALTA review, entitlement counsel input, civil/utility findings, demolition-readiness review, market broker input, and GC estimating.</p>
+        <div className="grid gap-4 lg:grid-cols-2">
+          <article className="rounded-2xl border border-[#d7dee8] bg-white p-5">
+            <h3 className="text-lg font-semibold text-[#0f223a]">What the Capital Funds</h3>
+            <div className="mt-3 space-y-3 text-sm text-slate-700">
+              <div className="rounded-xl border border-[#e6ebf2] p-3">
+                <p className="font-semibold text-[#0f223a]">Community / Public-Sector Support</p>
+                <p className="mt-1"><span className="font-medium text-[#0f223a]">Budget Range:</span> $5,000–$8,000</p>
+                <p className="mt-1">Funds meeting exhibits, DURA follow-up materials, basic feedback tracking, postcard/email updates, and light coordination support.</p>
+              </div>
+            </div>
+          </article>
+          <article className="rounded-2xl border border-[#d7dee8] bg-white p-5">
+            <h3 className="text-lg font-semibold text-[#0f223a]">Uses Table</h3>
+            <div className="mt-3 overflow-x-auto rounded-xl border border-[#e6ebf2]">
+              <table className="min-w-[560px] w-full text-sm">
+                <thead className="bg-[#f7faff]">
+                  <tr>
+                    <th className="p-3 text-left font-semibold text-[#0f223a]">Use</th>
+                    <th className="p-3 text-left font-semibold text-[#0f223a]">Low</th>
+                    <th className="p-3 text-left font-semibold text-[#0f223a]">High</th>
+                    <th className="p-3 text-left font-semibold text-[#0f223a]">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t border-[#e6ebf2] align-top">
+                    <td className="p-3 text-slate-700">Community / Public-Sector Support</td>
+                    <td className="p-3 text-slate-700">$5,000</td>
+                    <td className="p-3 text-slate-700">$8,000</td>
+                    <td className="p-3 text-slate-700">Meeting exhibits, DURA follow-up materials, basic feedback tracking, postcard/email updates, and light coordination support.</td>
+                  </tr>
+                  <tr className="border-t border-[#e6ebf2] align-top font-semibold">
+                    <td className="p-3 text-[#0f223a]">Total Uses</td>
+                    <td className="p-3 text-[#0f223a]">$160,000</td>
+                    <td className="p-3 text-[#0f223a]">$478,000</td>
+                    <td className="p-3 text-[#0f223a]">Recommended investor-facing tranche should be narrowed to $250,000–$400,000.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-3 text-xs text-slate-500">Community / Public-Sector Support budget line is $5,000–$8,000.</p>
+          </article>
+        </div>
+      </section>
 
       <section id="risk-register" className="space-y-4 scroll-mt-24"><h2 className="text-2xl font-semibold text-[#0f223a]">Risk Register + Mitigation Plan</h2><p className="text-slate-700">The project&apos;s value will depend on converting key risks into known quantities. The following register should be updated as new diligence is completed.</p></section>
 
