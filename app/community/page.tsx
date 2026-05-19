@@ -82,7 +82,7 @@ export default function CommunityPage() {
         </p>
         <div className="mt-5 flex flex-col justify-center gap-3 sm:mt-6 sm:flex-row">
           <a href="#site-location" className="rounded-lg bg-[#0B223F] px-5 py-3 text-center text-sm font-semibold text-white">View the Site</a>
-          <a href="#share-feedback" className="rounded-lg border border-[#0B223F] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0B223F]">Share Feedback</a>
+          <a href={feedbackHref} className="rounded-lg border border-[#0B223F] bg-white px-5 py-3 text-center text-sm font-semibold text-[#0B223F]">Share Feedback</a>
         </div>
       </section>
 
