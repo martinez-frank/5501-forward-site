@@ -205,7 +205,6 @@ export default function ProjectPage() {
           <Link href="/execution-roadmap" className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#12263a]">Explore the Roadmap</Link>
           <Link href="/development-strategy" className="rounded-md border border-white bg-white px-4 py-2 text-sm font-semibold text-[#12263a]">View Development Strategy</Link>
           <Link href="/community" target="_blank" rel="noopener noreferrer" className="rounded-md border border-[#f2c14e] bg-white px-4 py-2 text-sm font-semibold text-[#12263a]">Community Vision Page ↗</Link>
-          <Link href="/contact" className="rounded-md bg-[#12263a] px-4 py-2 text-sm font-semibold text-white">Contact Project Team</Link>
         </div>
       </section>
     </div>
