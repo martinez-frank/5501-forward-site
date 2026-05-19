@@ -203,9 +203,6 @@ export default function DocumentsPage() {
         <p className="max-w-[90ch] text-base leading-7 text-slate-200">
           The project team is organizing documents in a staged manner so that each study, proposal, memo, and decision package supports a clearer funding, entitlement, design, or public-sector decision. The goal is not to create volume. The goal is to convert information into project certainty.
         </p>
-        <p className="rounded-xl border border-[#f2c14e]/70 bg-[#f2c14e]/10 p-4 text-base font-semibold leading-7 text-[#fff7dd]">
-          Capital should not be asked to guess. Documents should make the project underwriteable.
-        </p>
       </section>
     </div>
   )
