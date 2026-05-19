@@ -46,11 +46,11 @@ export default function DevelopmentEconomicsPage() {
         <p className="text-xs text-slate-500">All residential SF figures are preliminary conceptual planning ranges only and should be treated as directional, subject to architect test fits, building efficiency, core/egress requirements, parking strategy, setbacks, unit mix, and entitlement review.</p>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {[
-            ['3-Story Baseline', 'Control Case', 'Low / By-Right', 'Retail: 2,000–3,500 SF', 'Lowest entitlement-risk path. Use as the baseline control case while testing higher-density upside.'],
-            ['6-Story Moderate Lift', 'Moderate Lift Study', 'Moderate / High', 'Retail: 2,000–3,500 SF', 'Continue evaluating entitlement, parking, cost, public-benefit, and market validation considerations.'],
-            ['8-Story Optimized Yield', 'Advanced Feasibility', 'High', 'Retail: 2,000–3,500 SF', 'Higher-density case with potential long-term value if public-sector alignment and economics are validated.'],
-            ['10-Story Maximum Upside', 'Strategic Optionality', 'Very High', 'Retail: 2,000–3,500 SF', 'Preserve optionality while City Council, DURA, entitlement, and capital-stack conversations continue.'],
-          ].map(([title, badge, risk, retail, body]) => <article key={title} className="rounded-2xl border border-[#d7dee8] bg-white p-5"><p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a67c00]">{badge}</p><h3 className="mt-2 font-semibold text-[#0f223a]">{title}</h3><p className="mt-2 text-sm font-medium text-[#0f223a]">Risk: {risk}</p><p className="mt-1 text-sm font-medium text-[#0f223a]">{retail}</p><p className="mt-2 text-sm text-slate-700">{body}</p></article>)}
+            ['3-Story Baseline', 'Control Case', 'Low / By-Right', 'Lowest entitlement-risk path. Use as the baseline control case while testing higher-density upside.'],
+            ['6-Story Moderate Lift', 'Moderate Lift Study', 'Moderate / High', 'Continue evaluating entitlement, parking, cost, public-benefit, and market validation considerations.'],
+            ['8-Story Optimized Yield', 'Advanced Feasibility', 'High', 'Higher-density case with potential long-term value if public-sector alignment and economics are validated.'],
+            ['10-Story Maximum Upside', 'Strategic Optionality', 'Very High', 'Preserve optionality while City Council, DURA, entitlement, and capital-stack conversations continue.'],
+          ].map(([title, badge, risk, body]) => <article key={title} className="rounded-2xl border border-[#d7dee8] bg-white p-5"><p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#a67c00]">{badge}</p><h3 className="mt-2 font-semibold text-[#0f223a]">{title}</h3><p className="mt-2 text-sm font-medium text-[#0f223a]">Risk: {risk}</p><p className="mt-2 text-sm text-slate-700">{body}</p></article>)}
         </div>
         <div className="space-y-4">
           {[
