@@ -9,7 +9,7 @@ const documentStatuses = [
   { name: 'Concept Renderings', status: 'Available', access: 'Public', notes: 'Preliminary design discussion only' },
   { name: 'Community Vision Materials', status: 'Active', access: 'Public', notes: 'Supports QR outreach and feedback page' },
   { name: 'Investor Brief', status: 'Active', access: 'Public / controlled', notes: 'Capital-readiness narrative' },
-  { name: 'DURA Coordination Materials', status: 'In progress', access: 'Internal / controlled', notes: 'Public-sector support under discussion; not guaranteed' },
+  { name: 'Public-Sector / DURA Eligibility Materials', status: 'In process', access: 'Internal / controlled', notes: 'Public-sector pathway under discussion; eligibility and funding not guaranteed.' },
 ] as const
 
 type PublicMaterial = {
@@ -67,9 +67,9 @@ const controlledMaterials = [
       'Future GC and consultant input to support cost range, phasing, construction assumptions, and contingency planning.',
   },
   {
-    title: 'Entitlement / Public-Sector Coordination',
+    title: 'Entitlement / Public-Sector Eligibility Review',
     description:
-      'Future memos and materials related to city process, DURA discussions, public benefit, and entitlement pathway evaluation.',
+      'Future memos and materials related to city process, DURA eligibility, public benefit, and entitlement pathway evaluation.',
   },
 ] as const
 
@@ -79,9 +79,9 @@ const pendingDocuments = [
   'Consultant scope matrix',
   'Preliminary cost range',
   'Entitlement path memo',
-  'Public-sector funding eligibility memo',
+  'Public-sector eligibility memo',
   'Capital stack framework',
-  'Investor / lender package',
+  'Investor / Lender Decision Package',
   'Updated community outreach summary',
   'Go / no-go decision memo',
 ] as const
@@ -113,6 +113,9 @@ export default function DocumentsPage() {
 
       <section className="space-y-5">
         <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Document Status Dashboard</h2>
+        <p className="max-w-[90ch] text-base leading-7 text-slate-700">
+          Access level note: Public materials may be shared for general project, community, or public-sector review. Controlled materials may contain technical, legal, environmental, financial, ownership, or predevelopment information and should be shared selectively with qualified stakeholders, consultants, lenders, public-sector partners, or capital partners.
+        </p>
         <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
           <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr_2fr] md:gap-4 md:border-b md:border-slate-200 md:bg-slate-50 md:px-6 md:py-4 md:text-xs md:font-semibold md:uppercase md:tracking-[0.14em] md:text-slate-600">
             <p>Document</p>
@@ -186,7 +189,7 @@ export default function DocumentsPage() {
       </section>
 
       <section className="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-        <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Pending / Next Documents</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Critical Path Documents Pending</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {pendingDocuments.map((item) => (
             <div key={item} className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700">
@@ -199,9 +202,9 @@ export default function DocumentsPage() {
 
       <section className="space-y-5 rounded-2xl border border-[#0d1b2a] bg-[#0d1b2a] p-6 text-white sm:p-8 md:p-10">
         <span className="block h-1 w-16 rounded-full bg-[#f2c14e]" />
-        <h2 className="text-3xl font-semibold tracking-tight">Document Discipline Matters</h2>
+        <h2 className="text-3xl font-semibold tracking-tight">Document Control Principle</h2>
         <p className="max-w-[90ch] text-base leading-7 text-slate-200">
-          The project team is organizing documents in a staged manner so that each study, proposal, memo, and decision package supports a clearer funding, entitlement, design, or public-sector decision. The goal is not to create volume. The goal is to convert information into project certainty.
+          The project team is organizing documents in a staged manner so that public materials, controlled diligence, consultant work product, and investor-readiness materials remain clearly separated. Each document should support a specific environmental, entitlement, design, public-sector, or capital decision.
         </p>
       </section>
     </div>
