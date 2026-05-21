@@ -4,42 +4,42 @@ import Link from 'next/link'
 const thesisCards = [
   {
     title: 'Preserve the By-Right Path',
-    body: 'The 3-story scenario provides the clearest near-term execution path and helps protect against overcommitting before entitlement certainty is established.',
+    body: 'The 3-story scenario provides the clearest near-term control case and helps protect against overcommitting before entitlement, cost, market, infrastructure, and financing conditions are better understood.',
   },
   {
-    title: 'Test Height Upside',
-    body: '6-, 8-, and 10-story scenarios can be studied for housing yield, affordability impact, financial feasibility, neighborhood fit, and public-benefit alignment.',
+    title: 'Test Residential Yield Sensitivities',
+    body: '6-, 8-, and 10-story scenarios may be studied as planning sensitivities to test housing yield, affordability impact, financial feasibility, neighborhood fit, infrastructure requirements, and public-benefit alignment.',
   },
   {
     title: 'Sequence Capital Carefully',
-    body: 'Early capital should reduce uncertainty, not create premature obligations. Consultant spend should answer specific entitlement, environmental, market, design, or financing questions.',
+    body: 'Early capital should reduce uncertainty, not create premature obligations. Consultant spend should answer specific entitlement, environmental, market, design, infrastructure, cost, or financing questions.',
   },
 ] as const
 
 const scenarioCards = [
   {
-    title: '3 Stories — Baseline / By-Right Path',
-    role: 'Fastest executable baseline',
-    strength: 'Lowest entitlement risk and strongest near-term control',
-    risk: 'Lower yield and potentially limited public-benefit capacity',
+    title: '3 Stories — By-Right Control Case',
+    role: 'Lowest entitlement-height risk baseline',
+    strength: 'Provides the clearest control case and near-term execution path, subject to zoning confirmation.',
+    risk: 'May produce lower yield and may require cost control, market validation, and public-benefit alignment to support feasibility.',
   },
   {
-    title: '6 Stories — Moderate Lift',
-    role: 'Balanced feasibility test',
-    strength: 'Improves housing yield and project economics while remaining more context-sensitive than taller alternatives',
-    risk: 'Requires zoning, design, community, and capital validation',
+    title: '6 Stories — Primary Feasibility Case',
+    role: 'Primary feasibility scenario',
+    strength: 'May improve residential yield and project viability while remaining more moderate than higher-density sensitivity cases.',
+    risk: 'Requires entitlement pathway, infrastructure, parking, public-benefit, affordability, cost, financing, and market validation.',
   },
   {
-    title: '8 Stories — Optimized Yield',
-    role: 'Higher-value development scenario',
-    strength: 'Stronger unit count, possible affordability support, and improved capital story',
-    risk: 'Greater entitlement, parking, massing, and stakeholder complexity',
+    title: '8 Stories — Higher-Density Sensitivity',
+    role: 'Higher-density sensitivity case',
+    strength: 'May create additional residential yield and long-term optionality if entitlement, public-sector alignment, infrastructure, market, cost, and capital conditions support further study.',
+    risk: 'Greater entitlement, parking, infrastructure, massing, financing, construction-cost, and stakeholder complexity.',
   },
   {
-    title: '10 Stories — Maximum Upside',
-    role: 'Long-range upside test case',
-    strength: 'Highest density and strongest potential value creation',
-    risk: 'Longest approval path, highest entitlement risk, and greatest need for public-sector alignment',
+    title: '10 Stories — Long-Range Entitlement Sensitivity',
+    role: 'Long-range sensitivity case',
+    strength: 'Preserves the ability to understand the outer boundary of potential residential yield if entitlement, DURA, public-benefit, infrastructure, market, parking, and capital-stack conditions support further study.',
+    risk: 'Highest entitlement, public-process, infrastructure, parking, construction-cost, financing, timeline, and community-response risk. Not a proposed base plan.',
   },
 ] as const
 
@@ -130,7 +130,7 @@ export default function StrategyPage() {
       <section className="space-y-6 rounded-2xl border border-[#0d1b2a] bg-[#0d1b2a] p-6 text-white sm:p-8 md:p-10">
         <div className="space-y-3">
           <span className="block h-1 w-16 rounded-full bg-[#f2c14e]" />
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-[2.05rem]">Preserve the executable path. Test the upside. Sequence capital with certainty.</h2>
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-[2.05rem]">Preserve the executable path. Test residential yield sensitivity. Sequence capital with certainty.</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {thesisCards.map((card) => (
@@ -144,6 +144,9 @@ export default function StrategyPage() {
 
       <section className="space-y-6">
         <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Scenario Strategy Matrix</h2>
+        <p className="max-w-[95ch] text-sm leading-6 text-slate-700 sm:text-base">
+          These scenarios are planning sensitivities, not proposed final designs. The 3-story case is the by-right control case, the 6-story case is the primary feasibility case, and the 8- and 10-story cases require additional entitlement, public-sector, infrastructure, market, cost, and capital validation.
+        </p>
         <div className="grid gap-4 md:grid-cols-2">
           {scenarioCards.map((scenario) => (
             <article key={scenario.title} className="rounded-xl border border-slate-200 bg-white p-5">
@@ -166,14 +169,14 @@ export default function StrategyPage() {
           ))}
         </div>
         <p className="rounded-lg border border-slate-200 bg-[#fffdf8] p-4 text-sm leading-6 text-slate-700">
-          These scenarios are planning studies only. No final height, density, unit count, retail program, parking plan, financing structure, or approval path has been selected.
+          These scenarios are planning studies only. No final height, density, unit count, retail program, parking plan, financing structure, public-sector support, or approval path has been selected.
         </p>
       </section>
 
       <section className="space-y-6 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
         <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Why a Stronger Strategy Matters</h2>
         <p className="max-w-[85ch] text-base leading-7 text-slate-700">
-          A successful strategy must connect private feasibility with visible public benefit. The project becomes stronger when the development path can support neighborhood value, housing opportunity, street-level activation, and responsible reinvestment.
+          A successful strategy must connect private feasibility with visible public benefit. The project becomes stronger when the development path can support neighborhood value, housing opportunity, street-level activation, public-safety improvement, and responsible reinvestment without overcommitting before diligence is complete.
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {benefitCards.map((item) => (
@@ -214,7 +217,7 @@ export default function StrategyPage() {
         <span className="block h-1 w-16 rounded-full bg-[#f2c14e]" />
         <h2 className="text-3xl font-semibold tracking-tight">Recommended Strategic Posture</h2>
         <p className="max-w-[85ch] text-base leading-7 text-slate-200">
-          Advance the 3-story by-right path as the fastest executable baseline while preserving optionality for a higher-value entitlement path if market, community, city, consultant, and capital signals support it.
+          Preserve the 3-story by-right control case as the clearest near-term baseline while testing whether additional residential yield can be justified through entitlement, market, community, infrastructure, public-sector, consultant, and capital validation.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link href="/roadmap" className="rounded-lg bg-white px-5 py-3 text-center text-sm font-semibold text-[#0d1b2a] hover:bg-slate-100">Review Roadmap →</Link>
