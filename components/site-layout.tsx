@@ -41,6 +41,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div className="mx-auto w-full max-w-4xl space-y-1 px-4 py-6 text-sm text-slate-600 sm:px-6">
             <p className="font-medium text-slate-800">5501 Forward</p>
             <p>Listening First. Planning Responsibly.</p>
+            <a href="mailto:community@5501forward.com" className="inline-block text-slate-700 underline underline-offset-2">
+              community@5501forward.com
+            </a>
           </div>
         </footer>
       </div>

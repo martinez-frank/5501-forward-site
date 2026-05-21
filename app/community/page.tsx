@@ -167,6 +167,12 @@ export default function CommunityPage() {
         <h2 className="text-3xl font-bold">We Want to Hear From You</h2>
         <p className="text-white">What would you like this corner to offer the neighborhood?</p>
         <a href={feedbackHref} className="inline-flex w-full items-center justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-[#0B223F] sm:w-auto">Email the Project Team</a>
+        <a href="mailto:community@5501forward.com" className="block text-sm font-medium text-white underline underline-offset-2 sm:text-[15px]">
+          community@5501forward.com
+        </a>
+        <p className="text-xs leading-6 text-white/90 sm:text-sm">
+          You may also copy and paste this email address if your device does not open an email app.
+        </p>
       </section>
 
       <section className="space-y-4 rounded-2xl border border-[#D99A19] bg-[#0B223F] p-5 text-white shadow-sm sm:p-6">
