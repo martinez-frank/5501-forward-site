@@ -36,15 +36,6 @@ const decisionGates = [
   },
 ] as const
 
-const stakeholderPreview = [
-  'Open Decisions',
-  'Consultant Workstreams',
-  'Risk Register',
-  'Document Library',
-  'Capital Readiness',
-  'Meeting Notes',
-] as const
-
 const consultantGroup = [
   {
     nameRole: 'Terry Johnson — Owner / Developer',
@@ -148,22 +139,6 @@ export default function HomePage() {
               <h3 className="mt-2 text-base font-semibold">{gate.title}</h3>
               <p className="mt-2 text-sm leading-6 text-slate-200">{gate.detail}</p>
             </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="space-y-5 rounded-2xl border border-slate-200 bg-[#fffdf8] p-6 sm:p-8">
-        <div className="flex items-center justify-between gap-3">
-          <h2 className="text-3xl font-semibold tracking-tight text-[#0d1b2a]">Owner / Stakeholder Dashboard</h2>
-          <span className="rounded-full border border-[#f2c14e] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#0d1b2a]">Coming Soon</span>
-        </div>
-        <p className="text-base leading-7 text-slate-700">
-          A future private planning dashboard can organize project decisions, consultant updates, documents, risks, and
-          capital-readiness workstreams for the ownership and stakeholder group.
-        </p>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {stakeholderPreview.map((item) => (
-            <div key={item} className="rounded-lg border border-slate-200 bg-white p-4 text-sm font-medium text-slate-800">{item}</div>
           ))}
         </div>
       </section>
