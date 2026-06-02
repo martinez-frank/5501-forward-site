@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
@@ -17,7 +17,35 @@ const navItems = [
 export function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   const isCommunityPage = pathname === '/community'
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef<HTMLDetailsElement>(null)
   const isActivePath = (href: string) => pathname === href || pathname.startsWith(`${href}/`)
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return
+    }
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!menuRef.current?.contains(event.target as Node)) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false)
+      }
+    }
+
+    document.addEventListener('pointerdown', handlePointerDown)
+    document.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isMenuOpen])
 
   if (isCommunityPage) {
     return (
@@ -85,7 +113,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             ))}
           </nav>
 
-          <details className="group relative col-start-3 justify-self-end lg:hidden">
+          <details ref={menuRef} open={isMenuOpen} onToggle={(event) => setIsMenuOpen(event.currentTarget.open)} className="group relative col-start-3 justify-self-end lg:hidden">
             <summary className="cursor-pointer list-none rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-200 hover:bg-slate-50">
               Menu
             </summary>
@@ -95,6 +123,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   <li key={href}>
                     <Link
                       href={href}
+                      onClick={() => setIsMenuOpen(false)}
                       className={`block rounded-md px-3 py-2 text-sm font-medium transition duration-200 hover:bg-slate-100 hover:text-slate-900 ${isActivePath(href) ? 'bg-slate-100 text-[#0d1b2a]' : 'text-slate-700'}`}
                     >
                       {label}
