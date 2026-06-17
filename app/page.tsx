@@ -39,7 +39,7 @@ const decisionGates = [
 const consultantGroup = [
   {
     nameRole: 'Terry Johnson — Owner / Developer',
-    description: 'Property ownership and development sponsor.',
+    description: 'Property ownership and development sponsor through Choice Property Investments LLC.',
   },
   {
     nameRole: 'Lucy Van Dusen, LCVD Architecture — Architect Partner',
