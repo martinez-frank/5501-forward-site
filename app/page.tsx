@@ -79,6 +79,7 @@ export default function HomePage() {
             priority
           />
           <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-[#0d1b2a]">DENVER REDEVELOPMENT INITIATIVE</p>
+          <p className="mt-2 text-sm font-semibold text-[#12263a] sm:text-base">5501 E. 33rd Avenue, Denver, CO 80207</p>
           <p className="mt-5 max-w-[62ch] text-base leading-[1.6] font-normal text-[#1f2f43] sm:text-[17px] lg:text-[19px]">
             A community-informed redevelopment platform for 5501 E. 33rd Avenue in Denver, linking public priorities, consultant diligence, and responsible capital planning.
           </p>
