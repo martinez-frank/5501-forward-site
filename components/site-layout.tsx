@@ -9,6 +9,7 @@ const navItems = [
   ['Project', '/project'],
   ['Roadmap', '/roadmap'],
   ['Strategy', '/strategy'],
+  ['Market', '/market'],
   ['Investor Brief', '/investor-brief'],
   ['Documents', '/documents'],
   ['Contact', '/contact'],
