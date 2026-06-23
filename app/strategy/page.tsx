@@ -80,7 +80,7 @@ const gates = [
   },
   {
     title: 'Survey / Title / Legal Base',
-    body: 'Boundary, easements, ROW, utilities, title matters, and physical constraints.',
+    body: 'Boundary, easements, ROW, utilities, title matters, and physical constraints. Current status: Sealed ALTA received; title and multidisciplinary consultant integration in progress.',
   },
   {
     title: 'Market + Product Fit',
