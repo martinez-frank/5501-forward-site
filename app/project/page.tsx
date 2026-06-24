@@ -88,6 +88,7 @@ export default function ProjectPage() {
               'The current site condition creates an opportunity for reinvestment.',
               'Community input is important before final direction is advanced.',
               'Environmental, entitlement, design, and capital diligence remain active.',
+              'A final sealed ALTA/NSPS Land Title Survey has been received and is being integrated into title, access, utility, environmental, concept-design, and entitlement planning.',
               'No final design or construction plan has been approved.',
             ].map((item) => <li key={item}>• {item}</li>)}
           </ul>

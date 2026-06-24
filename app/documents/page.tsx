@@ -5,7 +5,7 @@ const documentStatuses = [
   { name: 'Geotechnical Report', status: 'Completed', access: 'Internal / controlled', notes: 'Owner-funded diligence' },
   { name: 'Phase I ESA', status: 'Completed', access: 'Internal / controlled', notes: 'Further investigation may be required based on findings' },
   { name: 'Phase II ESA Proposal', status: 'Pending', access: 'Internal / controlled', notes: 'Proposal ordered / requested' },
-  { name: 'ALTA Survey', status: 'Pending June 4', access: 'Internal / controlled', notes: 'Purchased and pending delivery' },
+  { name: 'ALTA/NSPS Land Title Survey', status: 'Completed — Sealed', access: 'Internal / controlled', notes: 'Final sealed survey received; title and consultant integration underway.' },
   { name: 'Concept Renderings', status: 'Available', access: 'Public', notes: 'Preliminary design discussion only' },
   { name: 'Community Vision Materials', status: 'Active', access: 'Public', notes: 'Supports QR outreach and feedback page' },
   { name: 'Investor Brief', status: 'Active', access: 'Public / controlled', notes: 'Capital-readiness narrative' },
@@ -58,8 +58,8 @@ const controlledMaterials = [
       'Proposal pending. Intended to clarify environmental risk and any potential cleanup, lender, or schedule exposure.',
   },
   {
-    title: 'ALTA Survey',
-    description: 'Purchased and pending delivery June 4. Needed for title, easement, access, utility, and legal-base confirmation.',
+    title: 'ALTA/NSPS Land Title Survey',
+    description: 'Completed and sealed. Establishes the current legal and physical survey base for boundary, right-of-way, access, utility, easement, title, design, entitlement, and lender-diligence coordination. The survey remains a controlled technical document.',
   },
   {
     title: 'Cost + Constructability Materials',
@@ -75,7 +75,7 @@ const controlledMaterials = [
 
 const pendingDocuments = [
   'Phase II ESA proposal',
-  'ALTA survey delivery — pending June 4',
+  'ALTA/title integration and coordinated consultant review',
   'Consultant scope matrix',
   'Preliminary cost range',
   'Entitlement path memo',
@@ -101,7 +101,7 @@ export default function DocumentsPage() {
           A controlled document hub for studies, planning materials, public-sector coordination, and investor-readiness workstreams.
         </p>
         <p className="max-w-[90ch] text-base leading-7 text-slate-700">
-          This page organizes the current project documents and pending workstreams for 5501 E. 33rd Avenue. Materials are preliminary and will continue to evolve as environmental follow-up, ALTA survey delivery, entitlement strategy, public-sector coordination, design testing, and capital planning advance.
+          This page organizes the current project documents and active workstreams for 5501 E. 33rd Avenue. Materials will continue to evolve as environmental follow-up, ALTA/title integration, entitlement strategy, public-sector coordination, design testing, and capital planning advance.
         </p>
         <div className="rounded-xl border border-[#f2c14e]/60 bg-[#fffdf4] p-4 text-sm leading-6 text-[#23364d] sm:text-base">
           <p className="font-semibold text-[#0d1b2a]">Planning &amp; discussion disclaimer</p>
