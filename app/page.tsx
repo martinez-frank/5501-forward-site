@@ -54,8 +54,8 @@ const consultantGroup = [
     description: 'Commercial GC review, alternate constructability perspective, and cost/field input.',
   },
   {
-    nameRole: 'Raymond Nelson — General Contractor',
-    description: 'GC advisory, site execution input, and construction planning support.',
+    nameRole: 'Peter Van Dusen, LCVD Architecture — Architectural Advisor',
+    description: 'Architectural advisory support, design feasibility input, entitlement-facing perspective, and project coordination insight.',
   },
 ] as const
 
