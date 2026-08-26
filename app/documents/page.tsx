@@ -3,13 +3,14 @@ import Link from 'next/link'
 
 const documentStatuses = [
   { name: 'Geotechnical Report', status: 'Completed', access: 'Internal / controlled', notes: 'Owner-funded diligence' },
-  { name: 'Phase I ESA', status: 'Completed', access: 'Internal / controlled', notes: 'Further investigation may be required based on findings' },
-  { name: 'Phase II ESA Proposal', status: 'Pending', access: 'Internal / controlled', notes: 'Proposal ordered / requested' },
+  { name: 'Phase I ESA', status: 'Completed', access: 'Internal / controlled', notes: 'Phase II completed; original Phase I RECs/VECs have been further evaluated.' },
+  { name: 'Phase II ESA', status: 'Completed — Aug. 21, 2026', access: 'Internal / controlled', notes: 'Commercial-use environmental uncertainty materially narrowed; targeted residential vapor and former fuel-island / UST follow-up remains.' },
   { name: 'ALTA/NSPS Land Title Survey', status: 'Completed — Sealed', access: 'Internal / controlled', notes: 'Final sealed survey received; title and consultant integration underway.' },
+  { name: 'DURA Notice to Proceed', status: 'Received — Aug. 18, 2026', access: 'Internal / controlled', notes: 'DURA Board authorized staff to advance scope, potential funding, and Redevelopment & Disbursement Agreement discussions; final approval remains pending.' },
   { name: 'Concept Renderings', status: 'Available', access: 'Public', notes: 'Preliminary design discussion only' },
   { name: 'Community Vision Materials', status: 'Active', access: 'Public', notes: 'Supports QR outreach and feedback page' },
   { name: 'Investor Brief', status: 'Active', access: 'Public / controlled', notes: 'Capital-readiness narrative' },
-  { name: 'Public-Sector / DURA Eligibility Materials', status: 'In process', access: 'Internal / controlled', notes: 'Public-sector pathway under discussion; eligibility and funding not guaranteed.' },
+  { name: 'Public-Sector / DURA Eligibility Materials', status: 'Agreement development', access: 'Internal / controlled', notes: 'DURA pathway advanced into scope, estimate, funding, and agreement discussions; final Board approval and funding remain pending.' },
 ] as const
 
 type PublicMaterial = {
@@ -50,12 +51,17 @@ const controlledMaterials = [
   {
     title: 'Phase I Environmental Site Assessment',
     description:
-      'Completed owner-funded diligence identifying environmental history and whether targeted follow-up is needed.',
+      'Completed owner-funded diligence identifying the site’s environmental history and the recognized environmental conditions that were subsequently evaluated through Phase II.',
   },
   {
-    title: 'Phase II Environmental Follow-Up',
+    title: 'Phase II Environmental Site Assessment',
     description:
-      'Proposal pending. Intended to clarify environmental risk and any potential cleanup, lender, or schedule exposure.',
+      'Completed August 21, 2026. The assessment materially narrowed commercial-use environmental uncertainty. Future residential planning may warrant targeted vapor-intrusion assessment, and the former fuel-pump island / UST anomaly remains a focused follow-up item for future assessment or construction planning.',
+  },
+  {
+    title: 'DURA Notice to Proceed',
+    description:
+      'Received August 18, 2026. DURA authorized staff to advance discussions regarding final scope, project estimates, potential funding participation, and a Redevelopment & Disbursement Agreement. Final funding and Board approval are not yet secured.',
   },
   {
     title: 'ALTA/NSPS Land Title Survey',
@@ -69,17 +75,17 @@ const controlledMaterials = [
   {
     title: 'Entitlement / Public-Sector Eligibility Review',
     description:
-      'Future memos and materials related to city process, DURA eligibility, public benefit, and entitlement pathway evaluation.',
+      'Ongoing materials related to city process, DURA eligibility, public benefit, final project scope, and entitlement pathway evaluation.',
   },
 ] as const
 
 const pendingDocuments = [
-  'Phase II ESA proposal',
+  'Phase II-informed environmental follow-up scope — residential vapor / former fuel-island UST evaluation as warranted',
   'ALTA/title integration and coordinated consultant review',
   'Consultant scope matrix',
   'Preliminary cost range',
   'Entitlement path memo',
-  'Public-sector eligibility memo',
+  'DURA final scope, project estimate, and Redevelopment & Disbursement Agreement materials',
   'Capital stack framework',
   'Investor / Lender Decision Package',
   'Updated community outreach summary',
@@ -101,12 +107,12 @@ export default function DocumentsPage() {
           A controlled document hub for studies, planning materials, public-sector coordination, and investor-readiness workstreams.
         </p>
         <p className="max-w-[90ch] text-base leading-7 text-slate-700">
-          This page organizes the current project documents and active workstreams for 5501 E. 33rd Avenue. Materials will continue to evolve as environmental follow-up, ALTA/title integration, entitlement strategy, public-sector coordination, design testing, and capital planning advance.
+          This page organizes the current project documents and active workstreams for 5501 E. 33rd Avenue. Materials will continue to evolve as Phase II-informed environmental follow-up, ALTA/title integration, entitlement strategy, DURA agreement development, design testing, and capital planning advance.
         </p>
         <div className="rounded-xl border border-[#f2c14e]/60 bg-[#fffdf4] p-4 text-sm leading-6 text-[#23364d] sm:text-base">
           <p className="font-semibold text-[#0d1b2a]">Planning &amp; discussion disclaimer</p>
           <p className="mt-1">
-            Documents shown or referenced on this page are for planning and discussion purposes only. They do not represent final approvals, final design, committed financing, or public funding approval.
+            Documents shown or referenced on this page are for planning and discussion purposes only. They do not represent final approvals, final design, committed financing, environmental clearance, or public funding approval.
           </p>
         </div>
       </section>
