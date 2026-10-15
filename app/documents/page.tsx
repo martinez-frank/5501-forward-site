@@ -7,6 +7,9 @@ const documentStatuses = [
   { name: 'Phase II ESA', status: 'Completed — Aug. 21, 2026', access: 'Internal / controlled', notes: 'Commercial-use environmental uncertainty materially narrowed; targeted residential vapor and former fuel-island / UST follow-up remains.' },
   { name: 'ALTA/NSPS Land Title Survey', status: 'Completed — Sealed', access: 'Internal / controlled', notes: 'Final sealed survey received; title and consultant integration underway.' },
   { name: 'DURA Notice to Proceed', status: 'Received — Aug. 18, 2026', access: 'Internal / controlled', notes: 'DURA Board authorized staff to advance scope, potential funding, and Redevelopment & Disbursement Agreement discussions; final approval remains pending.' },
+  { name: 'DURA Project Documentation Checklist', status: 'Received — Sep. 24, 2026', access: 'Internal / controlled', notes: 'Final materials targeted October 29 for the November 5 committee; full Board approval pending.' },
+  { name: 'EIS / Earth Services Abatement Proposal', status: 'Received — Oct. 7, 2026', access: 'Internal / controlled', notes: 'Active abatement pricing source; proposal requires clarification of exclusions and corrections. No contract award is implied.' },
+  { name: 'EIS Demolition Pricing', status: 'Pending written proposal', access: 'Internal / controlled', notes: 'Demolition is not included in the existing abatement base bid; request complete demolition scope, permitting, utility coordination and disposal costs.' },
   { name: 'Concept Renderings', status: 'Available', access: 'Public', notes: 'Preliminary design discussion only' },
   { name: 'Community Vision Materials', status: 'Active', access: 'Public', notes: 'Supports QR outreach and feedback page' },
   { name: 'Investor Brief', status: 'Active', access: 'Public / controlled', notes: 'Capital-readiness narrative' },
@@ -70,7 +73,7 @@ const controlledMaterials = [
   {
     title: 'Cost + Constructability Materials',
     description:
-      'Future GC and consultant input to support cost range, phasing, construction assumptions, and contingency planning.',
+      'EIS / Earth Services provided an asbestos-abatement proposal; a separately priced demolition scope is still pending. PG Construction Services is supporting preconstruction consultation and constructability review. Vendor pricing and technical details remain controlled.',
   },
   {
     title: 'Entitlement / Public-Sector Eligibility Review',
@@ -85,7 +88,8 @@ const pendingDocuments = [
   'Consultant scope matrix',
   'Preliminary cost range',
   'Entitlement path memo',
-  'DURA final scope, project estimate, and Redevelopment & Disbursement Agreement materials',
+  'DURA final scope, vendor estimates, site-control and insurance materials targeted by October 29 for November 5 committee review',
+  'EIS demolition scope and written price, abatement exclusions, and required air-clearance coordination',
   'Capital stack framework',
   'Investor / Lender Decision Package',
   'Updated community outreach summary',
