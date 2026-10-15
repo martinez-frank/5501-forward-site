@@ -36,7 +36,7 @@ export default function RoadmapDashboard() {
           <span className="rounded-full border border-[#d4af37]/60 px-3 py-1">Geotech reviewed</span>
           <span className="rounded-full border border-[#d4af37]/60 px-3 py-1">Phase II complete / targeted follow-up</span>
           <span className="rounded-full border border-[#d4af37]/60 px-3 py-1">Sealed ALTA received / title integration active</span>
-          <span className="rounded-full border border-[#d4af37]/60 px-3 py-1">DURA agreement discussions advancing</span>
+          <span className="rounded-full border border-[#d4af37]/60 px-3 py-1">DURA materials due Oct. 29 / committee Nov. 5</span>
           <span className="rounded-full border border-[#d4af37]/60 px-3 py-1">Capital narrative forming</span>
         </div>
         <div className="mt-6 flex flex-wrap gap-3"><Link href="/development-economics" className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#0d1b2a]">Development Economics</Link><Link href="/investor-brief" className="rounded-lg border border-[#d4af37] px-4 py-2 text-sm font-semibold">Investor Brief</Link></div>
@@ -50,7 +50,7 @@ export default function RoadmapDashboard() {
         <h2 className="text-2xl font-bold text-[#0f223a]">Current Diligence Read</h2>
         <div className="grid gap-4 md:grid-cols-3">
           <article className="rounded-xl border border-slate-200 bg-white p-5"><h3 className="font-semibold text-[#0f223a]">Phase II Complete</h3><p className="mt-2 text-sm text-slate-700">Commercial-use environmental uncertainty has materially narrowed. Residential vapor and former fuel-island / UST follow-up remain targeted planning items.</p></article>
-          <article className="rounded-xl border border-slate-200 bg-white p-5"><h3 className="font-semibold text-[#0f223a]">DURA Advanced</h3><p className="mt-2 text-sm text-slate-700">DURA Board authorized staff to proceed with final scope, potential funding, and Redevelopment and Disbursement Agreement discussions. Final funding remains subject to formal approval.</p></article>
+          <article className="rounded-xl border border-slate-200 bg-white p-5"><h3 className="font-semibold text-[#0f223a]">DURA Advanced</h3><p className="mt-2 text-sm text-slate-700">DURA staff requested final documentation by October 29 for the November 5 Community Investment Committee. Full Board consideration and funding remain subject to further review and formal approval.</p></article>
           <article className="rounded-xl border border-slate-200 bg-white p-5"><h3 className="font-semibold text-[#0f223a]">Next Capital Layer</h3><p className="mt-2 text-sm text-slate-700">Focus on entitlement, design, civil/utilities, market validation, cost confidence, site stabilization, and decision-ready capital materials rather than vertical construction.</p></article>
         </div>
       </section>
@@ -65,7 +65,7 @@ export default function RoadmapDashboard() {
         <div className="space-y-3">{phases.map(([title,status,body],index)=><article key={title} className="grid gap-3 rounded-xl border border-slate-200 bg-white p-4 md:grid-cols-[80px_1fr_220px]"><div className="text-sm font-semibold text-[#a67c00]">Phase {index+1}</div><div><h3 className="font-semibold text-[#0f223a]">{title}</h3><p className="mt-1 text-sm text-slate-700">{body}</p></div><div className="text-sm font-semibold text-slate-600">{status}</div></article>)}</div>
       </section>
 
-      <section className="rounded-xl border border-slate-200 bg-[#f8fafc] p-5"><h2 className="text-xl font-bold text-[#0f223a]">Near-Term Priorities</h2><ul className="mt-3 grid gap-2 text-sm md:grid-cols-2">{['Scope targeted environmental follow-up based on Phase II and selected development program','Integrate sealed ALTA with title, architecture, civil, utility, and entitlement review','Advance DURA scope and Redevelopment and Disbursement Agreement discussions','Validate 3-story control and 6-story primary feasibility cases through test fits','Develop conceptual construction pricing and market-supported economics','Prepare qualified investor / capital partner discussion materials'].map((a)=><li key={a} className="rounded-lg bg-white p-3 text-slate-700">{a}</li>)}</ul></section>
+      <section className="rounded-xl border border-slate-200 bg-[#f8fafc] p-5"><h2 className="text-xl font-bold text-[#0f223a]">Near-Term Priorities</h2><ul className="mt-3 grid gap-2 text-sm md:grid-cols-2">{['Scope targeted environmental follow-up based on Phase II and selected development program','Integrate sealed ALTA with title, architecture, civil, utility, and entitlement review','Complete DURA documentation by October 29 for the November 5 committee; final Board approval remains pending','Validate 3-story control and 6-story primary feasibility cases through test fits','Develop conceptual construction pricing and market-supported economics','Prepare qualified investor / capital partner discussion materials'].map((a)=><li key={a} className="rounded-lg bg-white p-3 text-slate-700">{a}</li>)}</ul></section>
     </div>
   )
 }
