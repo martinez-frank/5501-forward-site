@@ -50,6 +50,10 @@ const consultantGroup = [
     description: 'Preconstruction and constructability advice, preliminary cost and schedule input, and project-scope coordination. Consulting role only; no general-contractor award is implied.',
   },
   {
+    nameRole: 'Mikel — Independent GC Consultant',
+    description: 'Independent general-contractor consulting perspective on site readiness, constructability, preliminary costing, and project phasing. Advisory support only; no construction contract or GC award is implied.',
+  },
+  {
     nameRole: 'Peter Van Dusen, LCVD Architecture — Architectural Advisor',
     description: 'Architectural advisory support, design feasibility input, entitlement-facing perspective, and project coordination insight.',
   },
@@ -176,7 +180,7 @@ export default function HomePage() {
         </p>
         <ul className="grid gap-3 sm:grid-cols-2">
           {consultantGroup.map((member) => (
-            <li key={member.nameRole} className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-800">
+            <li key={member.nameRole} className={`rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-800 ${member.nameRole.startsWith('Peter Van Dusen') ? 'sm:col-span-2' : ''}`}>
               <p className="font-semibold text-[#0d1b2a]">{member.nameRole}</p>
               <p className="mt-2 text-slate-700">{member.description}</p>
               {member.nameRole.startsWith('PG Construction') && (
