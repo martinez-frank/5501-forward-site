@@ -188,6 +188,11 @@ export default function HomePage() {
                   PG Construction website ↗
                 </a>
               )}
+              {(member.nameRole.startsWith('Lucy Van Dusen') || member.nameRole.startsWith('Peter Van Dusen')) && (
+                <a href="https://lcvdarch.com" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block font-semibold text-[#0d1b2a] underline underline-offset-4">
+                  Visit LCVD Architecture ↗
+                </a>
+              )}
             </li>
           ))}
         </ul>
