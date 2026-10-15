@@ -5,7 +5,7 @@ import Link from 'next/link'
 const statusCards = [
   ['Current Phase', 'Early planning + due diligence'],
   ['Community Outreach', 'Active listening phase'],
-  ['Consultant Input', 'Architect / GC / project advisory input is being coordinated'],
+  ['Consultant Input', 'Architecture and PG Construction consulting input are being coordinated'],
   ['Entitlement Strategy', 'Being evaluated'],
   ['Capital Readiness', 'Pre-development positioning underway'],
   ['Design Status', 'Conceptual only — not approved'],
@@ -46,12 +46,8 @@ const consultantGroup = [
     description: 'Architectural planning, design feasibility, massing input, and entitlement-facing design guidance.',
   },
   {
-    nameRole: 'Mike Jameson — General Contractor A',
-    description: 'Commercial GC review, constructability input, and execution planning.',
-  },
-  {
-    nameRole: 'Klaus Hirtler — General Contractor B',
-    description: 'Commercial GC review, alternate constructability perspective, and cost/field input.',
+    nameRole: 'PG Construction Services, Inc. — Construction Consulting Partner',
+    description: 'Preconstruction and constructability advice, preliminary cost and schedule input, and project-scope coordination. Consulting role only; no general-contractor award is implied.',
   },
   {
     nameRole: 'Peter Van Dusen, LCVD Architecture — Architectural Advisor',
@@ -129,6 +125,9 @@ export default function HomePage() {
             </article>
           ))}
         </div>
+        <p className="rounded-lg border-l-4 border-[#f2c14e] bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+          <strong>DURA agreement review:</strong> Final documentation is targeted for October 29, 2026, ahead of the November 5 committee meeting. Full Board approval and funding remain pending.
+        </p>
       </section>
 
       <section className="space-y-5 rounded-2xl border border-slate-200 bg-[#0d1b2a] p-6 text-white sm:p-8">
@@ -175,16 +174,16 @@ export default function HomePage() {
         <p className="text-base leading-7 text-slate-700">
           A multidisciplinary advisory group is being assembled to support due diligence, design feasibility, entitlement strategy, construction planning, and capital-readiness.
         </p>
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
-          {consultantGroup.map((member, index) => (
-            <li
-              key={member.nameRole}
-              className={`rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-800 ${
-                index >= consultantGroup.length - 2 ? 'lg:col-span-3' : 'lg:col-span-2'
-              } ${index === consultantGroup.length - 1 ? 'sm:col-span-2' : ''}`}
-            >
+        <ul className="grid gap-3 sm:grid-cols-2">
+          {consultantGroup.map((member) => (
+            <li key={member.nameRole} className="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-800">
               <p className="font-semibold text-[#0d1b2a]">{member.nameRole}</p>
               <p className="mt-2 text-slate-700">{member.description}</p>
+              {member.nameRole.startsWith('PG Construction') && (
+                <a href="https://www.pg-construction.com/" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block font-semibold text-[#0d1b2a] underline underline-offset-4">
+                  PG Construction website ↗
+                </a>
+              )}
             </li>
           ))}
         </ul>
