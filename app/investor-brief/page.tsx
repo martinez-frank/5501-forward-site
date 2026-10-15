@@ -41,7 +41,7 @@ export default function InvestorBriefPage() {
       <section className="space-y-5">
         <h2 className="text-2xl font-semibold text-[#0f223a]">DURA Advancement</h2>
         <p className="text-slate-700">On August 18, 2026, the Denver Urban Renewal Authority Board of Commissioners authorized staff to move forward with the next phase of discussions for 5501 Forward. The process now moves into final scope development, project-estimate review, potential DURA participation, and negotiation of a Redevelopment and Disbursement Agreement.</p>
-        <p className="text-slate-700">DURA staff are targeting the October 15, 2026 Board meeting for finalization and approval, subject to change. Final funding remains subject to the agreement and formal Board approval.</p>
+        <p className="text-slate-700">DURA’s September 24, 2026 guidance sets October 29 as the target deadline for final submission materials for the November 5 Community Investment Committee meeting. Any subsequent November Board consideration remains subject to committee review, agreement execution, and formal approval. No funding has been awarded.</p>
       </section>
 
       <section className="space-y-5">
